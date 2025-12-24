@@ -47,6 +47,7 @@
             font-weight: 700;
             display: flex;
             align-items: center;
+            cursor: pointer;
         }
         
         .logo i {
@@ -82,6 +83,7 @@
             transition: all 0.3s ease;
             padding: 5px 0;
             position: relative;
+            cursor: pointer;
         }
         
         nav ul li a:hover {
@@ -334,84 +336,29 @@
             background: linear-gradient(to right, #42a5f5, #0d47a1);
         }
         
-        /* Data Analytics Projects Section */
-        .projects-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 80px;
+        /* Page Containers */
+        .page {
+            display: none;
         }
         
-        .project-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease;
+        .page.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
         }
         
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .project-img {
-            height: 200px;
-            background-size: cover;
-            background-position: center;
-        }
-        
-        .project-info {
-            padding: 20px;
-        }
-        
-        .project-info h3 {
-            color: #0d47a1;
-            margin-bottom: 10px;
-            font-size: 22px;
-        }
-        
-        .project-info p {
-            color: #666;
-            margin-bottom: 15px;
-        }
-        
-        .project-stats {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 15px;
-            font-size: 14px;
-            color: #555;
-        }
-        
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-        
-        .tag {
-            background: #e3f2fd;
-            color: #0d47a1;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         
         /* Business Analysis Form Page */
-        .form-page {
-            display: none;
-            padding: 50px 20px;
-            min-height: 80vh;
-        }
-        
         .form-container {
             background: white;
             border-radius: 12px;
             padding: 40px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
             max-width: 900px;
-            margin: 0 auto;
+            margin: 50px auto;
         }
         
         .form-title {
@@ -476,12 +423,6 @@
         }
         
         /* Contact Page */
-        .contact-page {
-            display: none;
-            padding: 50px 20px;
-            min-height: 80vh;
-        }
-        
         .contact-container {
             display: flex;
             flex-wrap: wrap;
@@ -490,6 +431,7 @@
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
         }
         
         .contact-info {
@@ -525,15 +467,9 @@
         }
         
         /* FAQ Page */
-        .faq-page {
-            display: none;
-            padding: 50px 20px;
-            min-height: 80vh;
-        }
-        
         .faq-container {
             max-width: 900px;
-            margin: 0 auto;
+            margin: 50px auto;
         }
         
         .faq-item {
@@ -607,17 +543,6 @@
             font-size: 14px;
         }
         
-        /* Active Page */
-        .active-page {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
         /* Responsive */
         @media (max-width: 768px) {
             .header-content {
@@ -659,7 +584,7 @@
     <!-- Header -->
     <header>
         <div class="container header-content">
-            <div class="logo-area">
+            <div class="logo-area" onclick="showPage('home')">
                 <div class="logo">
                     <i class="fas fa-chart-line"></i>
                     Syed <span>Furqan</span>
@@ -668,17 +593,17 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#home" class="active" onclick="showPage('home')">Home</a></li>
-                    <li><a href="#business" onclick="showPage('business')">Business Analysis</a></li>
-                    <li><a href="#contact" onclick="showPage('contact')">Contact</a></li>
-                    <li><a href="#faq" onclick="showPage('faq')">FAQ</a></li>
+                    <li><a class="active" onclick="showPage('home')">Home</a></li>
+                    <li><a onclick="showPage('business')">Business Analysis</a></li>
+                    <li><a onclick="showPage('contact')">Contact</a></li>
+                    <li><a onclick="showPage('faq')">FAQ</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Home Page -->
-    <section id="home" class="active-page">
+    <section id="home" class="page active">
         <!-- Hero Section -->
         <div class="hero">
             <h1>Data-Driven Business Solutions</h1>
@@ -842,7 +767,7 @@
     </section>
 
     <!-- Business Analysis Form Page -->
-    <section id="business" class="form-page">
+    <section id="business" class="page">
         <div class="container">
             <div class="form-container">
                 <h2 class="form-title">Business Analysis Request Form</h2>
@@ -1005,7 +930,7 @@
     </section>
 
     <!-- Contact Details Page -->
-    <section id="contact" class="contact-page">
+    <section id="contact" class="page">
         <div class="container">
             <h2 class="section-title">Contact Details</h2>
             <div class="contact-container">
@@ -1114,7 +1039,7 @@
     </section>
 
     <!-- FAQ Page -->
-    <section id="faq" class="faq-page">
+    <section id="faq" class="page">
         <div class="container">
             <h2 class="section-title">Frequently Asked Questions</h2>
             <div class="faq-container">
@@ -1216,42 +1141,6 @@
                         <p style="margin-top: 10px;">I provide detailed quotes after understanding your specific requirements during a free initial consultation.</p>
                     </div>
                 </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Do you provide training for my team?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes, I offer customized training programs to help your team develop data literacy and analytics skills. Training can cover:
-                        <ul style="margin-left: 20px; margin-top: 10px;">
-                            <li>Basic data analysis concepts</li>
-                            <li>Using dashboards and reports I create</li>
-                            <li>Excel/Google Sheets for data analysis</li>
-                            <li>Introduction to BI tools (Tableau, Power BI)</li>
-                            <li>Data-driven decision making workshops</li>
-                        </ul>
-                        <p style="margin-top: 10px;">Training can be delivered in-person or virtually, tailored to your team's current skill level.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>What happens after the project is completed?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>My service includes comprehensive post-project support:
-                        <ul style="margin-left: 20px; margin-top: 10px;">
-                            <li>Detailed documentation of all work delivered</li>
-                            <li>Training sessions for your team on using the analytics solutions</li>
-                            <li>30-day warranty period for bug fixes and minor adjustments</li>
-                            <li>Option for ongoing maintenance and support packages</li>
-                            <li>Follow-up consultation to ensure you're achieving desired outcomes</li>
-                        </ul>
-                        <p style="margin-top: 10px;">My goal is to ensure you can effectively use and benefit from the analytics solutions long-term.</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -1277,42 +1166,33 @@
     </footer>
 
     <script>
-        // Page navigation functions
+        // Page navigation function - FIXED
         function showPage(pageId) {
             // Hide all pages
-            document.getElementById('home').classList.remove('active-page');
-            document.getElementById('business').classList.remove('active-page');
-            document.getElementById('contact').classList.remove('active-page');
-            document.getElementById('faq').classList.remove('active-page');
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
             
             // Show selected page
-            document.getElementById(pageId).classList.add('active-page');
+            document.getElementById(pageId).classList.add('active');
             
             // Update active nav link
-            const navLinks = document.querySelectorAll('nav a');
-            navLinks.forEach(link => {
+            document.querySelectorAll('nav a').forEach(link => {
                 link.classList.remove('active');
             });
             
-            // Set active nav link based on page
-            let activeLink;
-            switch(pageId) {
-                case 'home': activeLink = document.querySelector('nav a[href="#home"]'); break;
-                case 'business': activeLink = document.querySelector('nav a[href="#business"]'); break;
-                case 'contact': activeLink = document.querySelector('nav a[href="#contact"]'); break;
-                case 'faq': activeLink = document.querySelector('nav a[href="#faq"]'); break;
-            }
+            // Add active class to clicked link
+            event.target.classList.add('active');
             
-            if(activeLink) {
-                activeLink.classList.add('active');
-            }
+            // Scroll to top
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
         
         // Initialize page
         document.addEventListener('DOMContentLoaded', function() {
-            // Show home page by default
-            showPage('home');
-            
             // FAQ toggle functionality
             const faqQuestions = document.querySelectorAll('.faq-question');
             faqQuestions.forEach(question => {
@@ -1328,6 +1208,7 @@
                 alert('Thank you for your business analysis request! I will review your information and contact you within 24 hours.');
                 this.reset();
                 showPage('home');
+                event.target.classList.add('active'); // Keep home active
             });
             
             document.getElementById('contact-form').addEventListener('submit', function(e) {
@@ -1336,17 +1217,9 @@
                 this.reset();
             });
             
-            // Smooth scroll for anchor links
-            document.querySelectorAll('nav a').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const pageId = this.getAttribute('href').substring(1);
-                    showPage(pageId);
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                });
+            // Logo click event
+            document.querySelector('.logo-area').addEventListener('click', function() {
+                showPage('home');
             });
         });
     </script>
