@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Syed Furqan | Business & Data Analytics Specialist</title>
+    <title>Advanced eCommerce Courses - Start Your Business</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -27,13 +27,10 @@
         
         /* Header Styles */
         header {
-            background: linear-gradient(135deg, #0d47a1, #42a5f5);
+            background: linear-gradient(135deg, #1a2980, #26d0ce);
             color: white;
             padding: 20px 0;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
         }
         
         .header-content {
@@ -43,27 +40,15 @@
         }
         
         .logo {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: 700;
             display: flex;
             align-items: center;
-            cursor: pointer;
         }
         
         .logo i {
             margin-right: 10px;
-            font-size: 28px;
-        }
-        
-        .logo span {
-            color: #ffde59;
-        }
-        
-        .analyst-title {
-            font-size: 14px;
-            font-weight: 500;
-            opacity: 0.9;
-            margin-top: 3px;
+            font-size: 32px;
         }
         
         nav ul {
@@ -81,60 +66,28 @@
             font-weight: 600;
             font-size: 16px;
             transition: all 0.3s ease;
-            padding: 5px 0;
-            position: relative;
-            cursor: pointer;
         }
         
         nav ul li a:hover {
             color: #ffde59;
-        }
-        
-        nav ul li a.active {
-            color: #ffde59;
-        }
-        
-        nav ul li a.active:after {
-            width: 100%;
-        }
-        
-        nav ul li a:after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #ffde59;
-            transition: width 0.3s ease;
-        }
-        
-        nav ul li a:hover:after {
-            width: 100%;
+            text-decoration: underline;
         }
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(13, 71, 161, 0.85), rgba(66, 165, 245, 0.9)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
             background-size: cover;
             background-position: center;
             color: white;
             text-align: center;
-            padding: 120px 20px;
+            padding: 100px 20px;
             margin-bottom: 50px;
         }
         
         .hero h1 {
-            font-size: 48px;
+            font-size: 42px;
             margin-bottom: 20px;
             font-weight: 800;
-        }
-        
-        .hero h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            font-weight: 600;
-            color: #ffde59;
         }
         
         .hero p {
@@ -145,7 +98,7 @@
         
         .cta-button {
             display: inline-block;
-            background: linear-gradient(to right, #ff8a00, #ff5252);
+            background: linear-gradient(to right, #ff8a00, #da1b60);
             color: white;
             padding: 15px 40px;
             border-radius: 50px;
@@ -154,8 +107,6 @@
             font-size: 18px;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(255, 138, 0, 0.4);
-            border: none;
-            cursor: pointer;
         }
         
         .cta-button:hover {
@@ -163,12 +114,12 @@
             box-shadow: 0 6px 20px rgba(255, 138, 0, 0.6);
         }
         
-        /* Section Styles */
+        /* Courses Section */
         .section-title {
             text-align: center;
             margin-bottom: 50px;
             font-size: 36px;
-            color: #0d47a1;
+            color: #1a2980;
             position: relative;
         }
         
@@ -177,75 +128,12 @@
             display: block;
             width: 100px;
             height: 4px;
-            background: linear-gradient(to right, #0d47a1, #42a5f5);
+            background: linear-gradient(to right, #1a2980, #26d0ce);
             margin: 10px auto;
             border-radius: 2px;
         }
         
-        /* About Section */
-        .about-section {
-            padding: 80px 20px;
-            margin-bottom: 50px;
-        }
-        
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-            flex-wrap: wrap;
-        }
-        
-        .about-text {
-            flex: 1;
-            min-width: 300px;
-        }
-        
-        .about-image {
-            flex: 1;
-            min-width: 300px;
-            text-align: center;
-        }
-        
-        .profile-img {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 8px solid white;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .about-text h2 {
-            color: #0d47a1;
-            margin-bottom: 25px;
-            font-size: 32px;
-        }
-        
-        .about-text p {
-            margin-bottom: 20px;
-            font-size: 18px;
-            color: #555;
-        }
-        
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .skill {
-            background: white;
-            padding: 10px 20px;
-            border-radius: 50px;
-            font-weight: 600;
-            color: #0d47a1;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-            border: 2px solid #e3f2fd;
-        }
-        
-        /* Services Section */
-        .services-container {
+        .courses-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -253,7 +141,7 @@
             margin-bottom: 80px;
         }
         
-        .service-card {
+        .course-card {
             background: white;
             border-radius: 12px;
             overflow: hidden;
@@ -262,66 +150,54 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
-        .service-card:hover {
+        .course-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
         }
         
-        .service-header {
+        .course-header {
             padding: 25px;
-            background: linear-gradient(135deg, #0d47a1, #42a5f5);
+            background: linear-gradient(135deg, #1a2980, #26d0ce);
             color: white;
             text-align: center;
         }
         
-        .service-icon {
+        .course-icon {
             font-size: 40px;
             margin-bottom: 15px;
         }
         
-        .service-header h3 {
+        .course-header h3 {
             font-size: 24px;
             margin-bottom: 5px;
         }
         
-        .service-body {
+        .course-body {
             padding: 25px;
         }
         
-        .service-description {
+        .course-description {
             color: #666;
             margin-bottom: 20px;
-            min-height: 100px;
+            min-height: 80px;
         }
         
-        .service-features {
-            list-style: none;
-            margin-bottom: 20px;
+        .rating {
+            color: #ffc107;
+            margin-bottom: 15px;
         }
         
-        .service-features li {
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
-            color: #555;
-        }
-        
-        .service-features li i {
-            color: #42a5f5;
-            margin-right: 10px;
-        }
-        
-        .service-price {
+        .price {
             font-size: 28px;
             font-weight: 700;
-            color: #0d47a1;
+            color: #1a2980;
             margin-bottom: 20px;
-            text-align: center;
         }
         
-        .service-btn {
+        .enroll-btn {
             display: block;
             width: 100%;
-            background: linear-gradient(to right, #0d47a1, #42a5f5);
+            background: linear-gradient(to right, #1a2980, #26d0ce);
             color: white;
             border: none;
             padding: 15px;
@@ -332,38 +208,84 @@
             transition: all 0.3s ease;
         }
         
-        .service-btn:hover {
-            background: linear-gradient(to right, #42a5f5, #0d47a1);
+        .enroll-btn:hover {
+            background: linear-gradient(to right, #26d0ce, #1a2980);
         }
         
-        /* Page Containers */
-        .page {
+        /* Projects Section */
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .project-info {
+            padding: 20px;
+        }
+        
+        .project-info h3 {
+            color: #1a2980;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+        
+        .project-info p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .tag {
+            background: #e9f7fe;
+            color: #1a2980;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        /* Form Page Styles */
+        .form-page {
             display: none;
+            padding: 50px 20px;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
-        .page.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        /* Business Analysis Form Page */
         .form-container {
             background: white;
             border-radius: 12px;
             padding: 40px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            max-width: 900px;
-            margin: 50px auto;
         }
         
         .form-title {
             text-align: center;
-            color: #0d47a1;
+            color: #1a2980;
             margin-bottom: 30px;
             font-size: 32px;
         }
@@ -389,9 +311,8 @@
         }
         
         .form-control:focus {
-            border-color: #42a5f5;
+            border-color: #26d0ce;
             outline: none;
-            box-shadow: 0 0 0 3px rgba(66, 165, 245, 0.1);
         }
         
         .form-row {
@@ -404,7 +325,7 @@
         }
         
         .submit-btn {
-            background: linear-gradient(to right, #0d47a1, #42a5f5);
+            background: linear-gradient(to right, #1a2980, #26d0ce);
             color: white;
             border: none;
             padding: 15px 40px;
@@ -419,10 +340,15 @@
         
         .submit-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(66, 165, 245, 0.4);
+            box-shadow: 0 5px 15px rgba(38, 208, 206, 0.4);
         }
         
         /* Contact Page */
+        .contact-page {
+            display: none;
+            padding: 50px 20px;
+        }
+        
         .contact-container {
             display: flex;
             flex-wrap: wrap;
@@ -431,13 +357,12 @@
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            margin: 50px auto;
         }
         
         .contact-info {
             flex: 1;
             padding: 40px;
-            background: linear-gradient(135deg, #0d47a1, #42a5f5);
+            background: linear-gradient(135deg, #1a2980, #26d0ce);
             color: white;
             min-width: 300px;
         }
@@ -466,10 +391,15 @@
             font-size: 20px;
         }
         
-        /* FAQ Page */
+        /* FAQ Section */
+        .faq-page {
+            display: none;
+            padding: 50px 20px;
+        }
+        
         .faq-container {
             max-width: 900px;
-            margin: 50px auto;
+            margin: 0 auto;
         }
         
         .faq-item {
@@ -508,7 +438,7 @@
         
         /* Footer */
         footer {
-            background: #0d47a1;
+            background: #1a2980;
             color: white;
             padding: 40px 20px;
             text-align: center;
@@ -534,7 +464,7 @@
         }
         
         .social-icons a:hover {
-            color: #ffde59;
+            color: #26d0ce;
         }
         
         .copyright {
@@ -553,11 +483,10 @@
             nav ul {
                 margin-top: 20px;
                 justify-content: center;
-                flex-wrap: wrap;
             }
             
             nav ul li {
-                margin: 5px 10px;
+                margin: 0 10px;
             }
             
             .hero h1 {
@@ -572,11 +501,6 @@
             .contact-container {
                 flex-direction: column;
             }
-            
-            .about-content {
-                flex-direction: column;
-                text-align: center;
-            }
         }
     </style>
 </head>
@@ -584,181 +508,123 @@
     <!-- Header -->
     <header>
         <div class="container header-content">
-            <div class="logo-area" onclick="showPage('home')">
-                <div class="logo">
-                    <i class="fas fa-chart-line"></i>
-                    Syed <span>Furqan</span>
-                </div>
-                <div class="analyst-title">Business & Data Analytics Specialist</div>
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                eCommerce Academy
             </div>
             <nav>
                 <ul>
-                    <li><a class="active" onclick="showPage('home')">Home</a></li>
-                    <li><a onclick="showPage('business')">Business Analysis</a></li>
-                    <li><a onclick="showPage('contact')">Contact</a></li>
-                    <li><a onclick="showPage('faq')">FAQ</a></li>
+                    <li><a href="#" onclick="showHomePage()">Home</a></li>
+                    <li><a href="#" onclick="showFormPage()">Get Business Solution</a></li>
+                    <li><a href="#" onclick="showContactPage()">Contact Details</a></li>
+                    <li><a href="#" onclick="showFaqPage()">FAQ</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Home Page -->
-    <section id="home" class="page active">
+    <section id="home-page">
         <!-- Hero Section -->
         <div class="hero">
-            <h1>Data-Driven Business Solutions</h1>
-            <h2>By Syed Furqan | Business & Data Analyst</h2>
-            <p>Transform your business with actionable insights, predictive analytics, and data-driven decision making. I help businesses leverage data for growth, efficiency, and competitive advantage.</p>
-            <button class="cta-button" onclick="showPage('business')">Get Business Analysis</button>
+            <h1>Advanced eCommerce Courses</h1>
+            <p>Created By <strong>Hunga Olli</strong></p>
+            <p>These courses will enable you to start an ecommerce business in Pakistan or international markets with highest level of profitability and minimum risk.</p>
+            <a href="#" class="cta-button" onclick="showFormPage()">Get Your Business Solution</a>
         </div>
 
         <div class="container">
-            <!-- About Section -->
-            <div class="about-section">
-                <div class="about-content">
-                    <div class="about-text">
-                        <h2>About Me</h2>
-                        <p>I'm <strong>Syed Furqan</strong>, a certified Business & Data Analyst with over 7 years of experience helping organizations transform raw data into strategic insights.</p>
-                        <p>My expertise includes data visualization, predictive modeling, business intelligence, and creating data-driven strategies for growth. I've worked with startups to Fortune 500 companies across multiple industries.</p>
-                        
-                        <h3 style="color: #0d47a1; margin-bottom: 15px; margin-top: 25px;">Core Skills:</h3>
-                        <div class="skills-container">
-                            <div class="skill">Data Analysis</div>
-                            <div class="skill">Business Intelligence</div>
-                            <div class="skill">SQL & Databases</div>
-                            <div class="skill">Python/R Programming</div>
-                            <div class="skill">Tableau/Power BI</div>
-                            <div class="skill">Predictive Analytics</div>
-                            <div class="skill">Statistical Modeling</div>
-                            <div class="skill">Dashboard Development</div>
+            <!-- Courses Section -->
+            <h2 class="section-title">Featured Courses</h2>
+            <div class="courses-container">
+                <!-- Shopify Dropshipping Course -->
+                <div class="course-card">
+                    <div class="course-header">
+                        <div class="course-icon">
+                            <i class="fas fa-shopping-cart"></i>
                         </div>
+                        <h3>SHOPIFY DROPSHIPPING</h3>
                     </div>
-                    <div class="about-image">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Syed Furqan" class="profile-img">
+                    <div class="course-body">
+                        <p class="course-description">Start your risk free dropshipping business from Pakistan in local and international markets under expert supervision</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span> 97% (1.2K)</span>
+                        </div>
+                        <div class="price">PKR 6,500</div>
+                        <button class="enroll-btn" onclick="showFormPage()">ENROLL NOW</button>
+                    </div>
+                </div>
+
+                <!-- Facebook Marketing Course -->
+                <div class="course-card">
+                    <div class="course-header">
+                        <div class="course-icon">
+                            <i class="fab fa-facebook-square"></i>
+                        </div>
+                        <h3>META MARKETING</h3>
+                    </div>
+                    <div class="course-body">
+                        <p class="course-description">Learn how to sell anything online with Facebook Ads and boost your income with 20+ premium strategies with live results.</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span> 97% (1.2K)</span>
+                        </div>
+                        <div class="price">PKR 6,500</div>
+                        <button class="enroll-btn" onclick="showFormPage()">ENROLL NOW</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Services Section -->
-            <h2 class="section-title">Analytics Services</h2>
-            <div class="services-container">
-                <!-- Business Intelligence Service -->
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <i class="fas fa-chart-bar"></i>
-                        </div>
-                        <h3>Business Intelligence</h3>
-                    </div>
-                    <div class="service-body">
-                        <p class="service-description">Comprehensive BI solutions including interactive dashboards, KPI tracking, and performance analytics to drive business decisions.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Custom Dashboard Development</li>
-                            <li><i class="fas fa-check"></i> KPI & Performance Metrics</li>
-                            <li><i class="fas fa-check"></i> Real-time Data Visualization</li>
-                            <li><i class="fas fa-check"></i> Monthly Performance Reports</li>
-                        </ul>
-                        <div class="service-price">PKR 25,000/month</div>
-                        <button class="service-btn" onclick="showPage('business')">Request Service</button>
-                    </div>
-                </div>
-
-                <!-- Data Analysis Service -->
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <h3>Data Analysis</h3>
-                    </div>
-                    <div class="service-body">
-                        <p class="service-description">In-depth data analysis to uncover patterns, trends, and insights that inform strategic business decisions.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Data Cleaning & Preparation</li>
-                            <li><i class="fas fa-check"></i> Statistical Analysis</li>
-                            <li><i class="fas fa-check"></i> Trend Identification</li>
-                            <li><i class="fas fa-check"></i> Insight Reporting</li>
-                        </ul>
-                        <div class="service-price">PKR 45,000/project</div>
-                        <button class="service-btn" onclick="showPage('business')">Request Service</button>
-                    </div>
-                </div>
-
-                <!-- Predictive Analytics Service -->
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h3>Predictive Analytics</h3>
-                    </div>
-                    <div class="service-body">
-                        <p class="service-description">Advanced predictive modeling to forecast trends, customer behavior, and business outcomes.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Forecasting Models</li>
-                            <li><i class="fas fa-check"></i> Customer Segmentation</li>
-                            <li><i class="fas fa-check"></i> Risk Assessment</li>
-                            <li><i class="fas fa-check"></i> Scenario Analysis</li>
-                        </ul>
-                        <div class="service-price">PKR 75,000/project</div>
-                        <button class="service-btn" onclick="showPage('business')">Request Service</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Data Analytics Projects Section -->
-            <h2 class="section-title">Analytics Projects</h2>
+            <!-- Projects Section -->
+            <h2 class="section-title">Student Projects</h2>
             <div class="projects-container">
                 <!-- Project 1 -->
                 <div class="project-card">
-                    <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80');"></div>
+                    <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80');"></div>
                     <div class="project-info">
-                        <h3>Retail Sales Forecasting</h3>
-                        <p>Developed a predictive model for a retail chain that improved inventory planning accuracy by 32% and reduced stockouts by 45%.</p>
-                        <div class="project-stats">
-                            <span><i class="fas fa-chart-line"></i> 32% Improvement</span>
-                            <span><i class="fas fa-calendar"></i> 4 Months</span>
-                        </div>
+                        <h3>Eco-Friendly Products Store</h3>
+                        <p>A successful dropshipping store specializing in sustainable home products. Achieved $15,000 in sales within first 3 months.</p>
                         <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Time Series</span>
-                            <span class="tag">Forecasting</span>
+                            <span class="tag">Shopify</span>
+                            <span class="tag">Dropshipping</span>
+                            <span class="tag">Eco Products</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
                 <div class="project-card">
-                    <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80');"></div>
+                    <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80');"></div>
                     <div class="project-info">
-                        <h3>Customer Churn Analysis</h3>
-                        <p>Identified key churn indicators for a telecom company, leading to a retention strategy that reduced churn by 28% in 6 months.</p>
-                        <div class="project-stats">
-                            <span><i class="fas fa-users"></i> 28% Reduction</span>
-                            <span><i class="fas fa-calendar"></i> 6 Months</span>
-                        </div>
+                        <h3>Fashion Accessories Brand</h3>
+                        <p>Built a fashion brand using Facebook Ads targeting. Generated 500+ sales in first month with 5x ROI on ad spend.</p>
                         <div class="project-tags">
-                            <span class="tag">R</span>
-                            <span class="tag">Cluster Analysis</span>
-                            <span class="tag">Segmentation</span>
+                            <span class="tag">Facebook Ads</span>
+                            <span class="tag">Branding</span>
+                            <span class="tag">Fashion</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 3 -->
                 <div class="project-card">
-                    <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80');"></div>
+                    <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80');"></div>
                     <div class="project-info">
-                        <h3>Financial Dashboard</h3>
-                        <p>Created an interactive financial dashboard for a manufacturing company that reduced monthly reporting time by 65% and improved decision-making.</p>
-                        <div class="project-stats">
-                            <span><i class="fas fa-clock"></i> 65% Time Saved</span>
-                            <span><i class="fas fa-calendar"></i> 3 Months</span>
-                        </div>
+                        <h3>Tech Gadgets Marketplace</h3>
+                        <p>Created a multi-vendor tech gadgets store with 50+ products. Achieved consistent $10,000 monthly revenue.</p>
                         <div class="project-tags">
-                            <span class="tag">Power BI</span>
-                            <span class="tag">Dashboard</span>
-                            <span class="tag">Finance</span>
+                            <span class="tag">Shopify</span>
+                            <span class="tag">Multi-Vendor</span>
+                            <span class="tag">Tech</span>
                         </div>
                     </div>
                 </div>
@@ -766,12 +632,11 @@
         </div>
     </section>
 
-    <!-- Business Analysis Form Page -->
-    <section id="business" class="page">
+    <!-- Business Solution Form Page -->
+    <section id="form-page" class="form-page">
         <div class="container">
             <div class="form-container">
-                <h2 class="form-title">Business Analysis Request Form</h2>
-                <p style="text-align: center; margin-bottom: 30px; color: #666;">Fill out this form to get a customized data analysis plan for your business</p>
+                <h2 class="form-title">Get Your Business Solution</h2>
                 <form id="business-form">
                     <div class="form-row">
                         <div class="form-group">
@@ -784,153 +649,75 @@
                         </div>
                     </div>
                     
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">Business Email *</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" class="form-control" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="company">Company/Organization *</label>
-                            <input type="text" id="company" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="position">Your Position *</label>
-                            <input type="text" id="position" class="form-control" required>
-                        </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" class="form-control" required>
+                        <small>Check spam or junk folder for verification code.</small>
                     </div>
                     
                     <div class="form-group">
-                        <label for="industry">Industry *</label>
-                        <select id="industry" class="form-control" required>
-                            <option value="">Select your industry</option>
-                            <option value="retail">Retail/E-commerce</option>
-                            <option value="finance">Finance/Banking</option>
-                            <option value="healthcare">Healthcare</option>
-                            <option value="manufacturing">Manufacturing</option>
-                            <option value="technology">Technology</option>
-                            <option value="services">Professional Services</option>
-                            <option value="education">Education</option>
-                            <option value="logistics">Logistics/Transportation</option>
+                        <label for="phone">Phone *</label>
+                        <input type="tel" id="phone" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="business-type">Business Type *</label>
+                        <select id="business-type" class="form-control" required>
+                            <option value="">Select your business type</option>
+                            <option value="dropshipping">Dropshipping</option>
+                            <option value="branded-products">Branded Products</option>
+                            <option value="service-based">Service-Based</option>
+                            <option value="affiliate-marketing">Affiliate Marketing</option>
                             <option value="other">Other</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
-                        <label for="company-size">Company Size *</label>
-                        <select id="company-size" class="form-control" required>
-                            <option value="">Select company size</option>
-                            <option value="1-10">1-10 employees</option>
-                            <option value="11-50">11-50 employees</option>
-                            <option value="51-200">51-200 employees</option>
-                            <option value="201-500">201-500 employees</option>
-                            <option value="501-1000">501-1000 employees</option>
-                            <option value="1000+">1000+ employees</option>
+                        <label for="experience">Experience Level *</label>
+                        <select id="experience" class="form-control" required>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
-                        <label for="data-maturity">Current Data Maturity Level *</label>
-                        <select id="data-maturity" class="form-control" required>
-                            <option value="">Select your data maturity</option>
-                            <option value="beginner">Beginner (Limited data collection)</option>
-                            <option value="intermediate">Intermediate (Basic reporting in place)</option>
-                            <option value="advanced">Advanced (Using advanced analytics)</option>
-                            <option value="expert">Expert (Data-driven decision making culture)</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="data-sources">What data sources do you have? *</label>
-                        <div style="margin-top: 10px;">
-                            <label style="display: block; margin-bottom: 8px;">
-                                <input type="checkbox" name="data-sources" value="sales"> Sales Data
-                            </label>
-                            <label style="display: block; margin-bottom: 8px;">
-                                <input type="checkbox" name="data-sources" value="customer"> Customer Data
-                            </label>
-                            <label style="display: block; margin-bottom: 8px;">
-                                <input type="checkbox" name="data-sources" value="financial"> Financial Data
-                            </label>
-                            <label style="display: block; margin-bottom: 8px;">
-                                <input type="checkbox" name="data-sources" value="website"> Website Analytics
-                            </label>
-                            <label style="display: block; margin-bottom: 8px;">
-                                <input type="checkbox" name="data-sources" value="social"> Social Media Data
-                            </label>
-                            <label style="display: block; margin-bottom: 8px;">
-                                <input type="checkbox" name="data-sources" value="operational"> Operational Data
-                            </label>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="analysis-needs">What type of analysis do you need? *</label>
-                        <select id="analysis-needs" class="form-control" required>
-                            <option value="">Select analysis needs</option>
-                            <option value="dashboard">Interactive Dashboard Development</option>
-                            <option value="reporting">Automated Reporting System</option>
-                            <option value="predictive">Predictive Analytics & Forecasting</option>
-                            <option value="customer">Customer Analytics & Segmentation</option>
-                            <option value="operations">Operations & Process Optimization</option>
-                            <option value="financial">Financial Analysis & Planning</option>
-                            <option value="full">Comprehensive Analytics Strategy</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="current-tools">Current Analytics Tools (if any)</label>
-                        <input type="text" id="current-tools" class="form-control" placeholder="Excel, Tableau, Power BI, Google Analytics, etc.">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="budget">Project Budget Range *</label>
-                        <select id="budget" class="form-control" required>
-                            <option value="">Select budget range</option>
+                        <label for="investment">Available Investment Range *</label>
+                        <select id="investment" class="form-control" required>
                             <option value="under-50000">Under PKR 50,000</option>
-                            <option value="50000-150000">PKR 50,000 - 150,000</option>
-                            <option value="150000-300000">PKR 150,000 - 300,000</option>
-                            <option value="300000-500000">PKR 300,000 - 500,000</option>
+                            <option value="50000-100000">PKR 50,000 - 100,000</option>
+                            <option value="100000-500000">PKR 100,000 - 500,000</option>
                             <option value="500000-plus">PKR 500,000+</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
-                        <label for="timeline">Project Timeline *</label>
-                        <select id="timeline" class="form-control" required>
-                            <option value="">Select timeline</option>
-                            <option value="urgent">Urgent (Within 2 weeks)</option>
-                            <option value="1-month">1 Month</option>
-                            <option value="1-3months">1-3 Months</option>
-                            <option value="3-6months">3-6 Months</option>
-                            <option value="6months+">6+ Months</option>
+                        <label for="analytics-needed">Data Analytics Needs *</label>
+                        <select id="analytics-needed" class="form-control" required>
+                            <option value="basic">Basic Analytics (Sales, Traffic)</option>
+                            <option value="advanced">Advanced Analytics (Customer Behavior, Funnel)</option>
+                            <option value="full">Full Analytics Suite with Forecasting</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
-                        <label for="business-goals">Primary Business Goals & Challenges *</label>
-                        <textarea id="business-goals" class="form-control" rows="5" placeholder="Describe your primary business goals, current challenges, and what you hope to achieve with data analytics..." required></textarea>
+                        <label for="goals">Business Goals *</label>
+                        <textarea id="goals" class="form-control" rows="4" placeholder="Describe your business goals, target market, and what you hope to achieve..." required></textarea>
                     </div>
                     
                     <div class="form-group">
-                        <label for="specific-questions">Specific Questions You Want Answered</label>
-                        <textarea id="specific-questions" class="form-control" rows="4" placeholder="What specific business questions do you want data to answer? (e.g., Why are sales declining? Who are our most profitable customers? How can we reduce operational costs?)"></textarea>
+                        <label for="challenges">Current Challenges</label>
+                        <textarea id="challenges" class="form-control" rows="3" placeholder="Any specific challenges you're facing in your business?"></textarea>
                     </div>
                     
-                    <button type="submit" class="submit-btn">Submit Analysis Request</button>
+                    <button type="submit" class="submit-btn">Submit Your Business Analysis Request</button>
                 </form>
             </div>
         </div>
     </section>
 
     <!-- Contact Details Page -->
-    <section id="contact" class="page">
+    <section id="contact-page" class="contact-page">
         <div class="container">
             <h2 class="section-title">Contact Details</h2>
             <div class="contact-container">
@@ -939,22 +726,11 @@
                     
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div>
-                            <h4>Syed Furqan</h4>
-                            <p>Business & Data Analyst</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div>
-                            <h4>Location</h4>
-                            <p>Karachi, Pakistan</p>
-                            <p>Available for remote projects worldwide</p>
+                            <h4>Address</h4>
+                            <p>123 Business Street, Karachi, Pakistan</p>
                         </div>
                     </div>
                     
@@ -964,8 +740,8 @@
                         </div>
                         <div>
                             <h4>Phone</h4>
-                            <p>+92 300 123 4567</p>
-                            <p>+92 21 123 4567</p>
+                            <p>+92 300 1234567</p>
+                            <p>+92 21 1234567</p>
                         </div>
                     </div>
                     
@@ -975,8 +751,8 @@
                         </div>
                         <div>
                             <h4>Email</h4>
-                            <p>syed.furqan@analyticspro.com</p>
-                            <p>contact@syedfurqan.com</p>
+                            <p>support@ecommerceacademy.pk</p>
+                            <p>info@ecommerceacademy.pk</p>
                         </div>
                     </div>
                     
@@ -985,25 +761,15 @@
                             <i class="fas fa-clock"></i>
                         </div>
                         <div>
-                            <h4>Availability</h4>
+                            <h4>Business Hours</h4>
                             <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                            <p>Response time: Within 24 hours</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-calendar"></i>
-                        </div>
-                        <div>
-                            <h4>Schedule a Consultation</h4>
-                            <p>Book a 30-minute free consultation call to discuss your analytics needs.</p>
+                            <p>Saturday: 10:00 AM - 4:00 PM</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="contact-form">
-                    <h3 style="color: #0d47a1; margin-bottom: 30px;">Send a Message</h3>
+                    <h3 style="color: #1a2980; margin-bottom: 30px;">Send Us a Message</h3>
                     <form id="contact-form">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Your Name" required>
@@ -1018,17 +784,7 @@
                         </div>
                         
                         <div class="form-group">
-                            <select class="form-control" required>
-                                <option value="">Inquiry Type</option>
-                                <option value="service">Service Inquiry</option>
-                                <option value="consultation">Free Consultation</option>
-                                <option value="partnership">Partnership Opportunity</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <textarea class="form-control" rows="6" placeholder="Your Message" required></textarea>
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
                         </div>
                         
                         <button type="submit" class="submit-btn">Send Message</button>
@@ -1039,106 +795,67 @@
     </section>
 
     <!-- FAQ Page -->
-    <section id="faq" class="page">
+    <section id="faq-page" class="faq-page">
         <div class="container">
             <h2 class="section-title">Frequently Asked Questions</h2>
             <div class="faq-container">
                 <div class="faq-item active">
                     <div class="faq-question">
-                        <span>What types of businesses do you work with as a data analyst?</span>
+                        <span>How will I receive the course?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>I work with businesses of all sizes across various industries including retail, finance, healthcare, manufacturing, technology, and services. Whether you're a startup looking to establish data-driven processes or an established company wanting to optimize your analytics, I can tailor solutions to your specific needs. My experience ranges from small businesses to Fortune 500 companies.</p>
+                        <p>After enrollment, you'll receive immediate access to our learning portal. You'll get login credentials via email, and can access all course materials, videos, and resources 24/7 from any device.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>What is your typical project timeline?</span>
+                        <span>Is this a recorded course?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Project timelines vary based on complexity:
-                        <ul style="margin-left: 20px; margin-top: 10px;">
-                            <li>Basic dashboard/report: 2-4 weeks</li>
-                            <li>Comprehensive data analysis: 4-8 weeks</li>
-                            <li>Predictive analytics project: 8-12 weeks</li>
-                            <li>Full BI implementation: 3-6 months</li>
-                        </ul>
-                        <p style="margin-top: 10px;">I provide detailed timelines after initial consultation based on project scope.</p>
+                        <p>Yes, all core lessons are pre-recorded for your convenience, allowing you to learn at your own pace. However, we also include live Q&A sessions, weekly webinars, and interactive assignments for practical learning.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>What data do I need to provide for analysis?</span>
+                        <span>How will you update the course?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>This depends on your business goals. Common data sources include:
-                        <ul style="margin-left: 20px; margin-top: 10px;">
-                            <li>Sales transaction data</li>
-                            <li>Customer databases/CRM data</li>
-                            <li>Financial statements and records</li>
-                            <li>Website/social media analytics</li>
-                            <li>Operational/process data</li>
-                            <li>Marketing campaign results</li>
-                        </ul>
-                        <p style="margin-top: 10px;">If you're unsure what data you have or need, I can help you identify and collect relevant data during the initial assessment.</p>
+                        <p>We update our courses quarterly with the latest eCommerce strategies, platform changes, and market trends. All updates are automatically added to your course access at no additional cost.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>What tools and technologies do you use?</span>
+                        <span>Who will answer my questions?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>I work with a variety of tools based on project requirements:
-                        <ul style="margin-left: 20px; margin-top: 10px;">
-                            <li><strong>Data Analysis:</strong> Python (Pandas, NumPy, Scikit-learn), R, SQL</li>
-                            <li><strong>Visualization:</strong> Tableau, Power BI, Matplotlib, Seaborn</li>
-                            <li><strong>Databases:</strong> MySQL, PostgreSQL, MongoDB, Google BigQuery</li>
-                            <li><strong>Other Tools:</strong> Excel/Google Sheets, Jupyter Notebooks, Git</li>
-                        </ul>
-                        <p style="margin-top: 10px;">I select tools based on your existing infrastructure, team skills, and project requirements.</p>
+                        <p>You'll have access to our dedicated support team and course mentors. Additionally, our private student community allows you to connect with instructors and fellow students for collaborative learning.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>How do you ensure data privacy and security?</span>
+                        <span>What is your refund policy?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Data security is my top priority. I implement several measures:
-                        <ul style="margin-left: 20px; margin-top: 10px;">
-                            <li>Secure data transfer (encrypted connections)</li>
-                            <li>Data anonymization when possible</li>
-                            <li>Secure storage on encrypted drives</li>
-                            <li>Strict access controls</li>
-                            <li>NDA (Non-Disclosure Agreement) for every project</li>
-                            <li>Compliance with relevant data protection regulations</li>
-                        </ul>
-                        <p style="margin-top: 10px;">I'm happy to sign additional confidentiality agreements specific to your industry requirements.</p>
+                        <p>We offer a 30-day money-back guarantee. If you're not satisfied with the course within the first 30 days, you can request a full refund, no questions asked.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>What is your pricing structure?</span>
+                        <span>Will I get 1-on-1 consultation?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>I offer flexible pricing based on project scope:
-                        <ul style="margin-left: 20px; margin-top: 10px;">
-                            <li><strong>Hourly Rate:</strong> PKR 3,500/hour for consultation and small tasks</li>
-                            <li><strong>Project-based:</strong> Fixed price for defined scope projects</li>
-                            <li><strong>Retainer:</strong> Monthly packages for ongoing analytics support</li>
-                            <li><strong>Training:</strong> Customized training programs for your team</li>
-                        </ul>
-                        <p style="margin-top: 10px;">I provide detailed quotes after understanding your specific requirements during a free initial consultation.</p>
+                        <p>Each student receives 60 classes and direct support tailored for your business through our exclusive Consultation Program. Our team will work closely with you on your unique challenges and guide you. Details about optional one-on-one sessions at nominal fees will be shared during the first lecture.</p>
                     </div>
                 </div>
             </div>
@@ -1148,51 +865,58 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <h3>Syed Furqan | Business & Data Analytics Specialist</h3>
-            <p>Transform your business with data-driven insights and strategic analytics</p>
+            <h3>Advanced eCommerce Academy</h3>
+            <p>Start your eCommerce journey with expert guidance and proven strategies</p>
             
             <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
                 <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-medium"></i></a>
                 <a href="#"><i class="fab fa-whatsapp"></i></a>
             </div>
             
             <div class="copyright">
-                <p>© 2023 Syed Furqan. All Rights Reserved. | Business & Data Analytics Solutions</p>
+                <p>Help Center <i class="fas fa-question-circle"></i> | Hanyado.com</p>
+                <p>All Rights Reserved © 2023 Advanced eCommerce Academy</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Page navigation function - FIXED
-        function showPage(pageId) {
-            // Hide all pages
-            document.querySelectorAll('.page').forEach(page => {
-                page.classList.remove('active');
-            });
-            
-            // Show selected page
-            document.getElementById(pageId).classList.add('active');
-            
-            // Update active nav link
-            document.querySelectorAll('nav a').forEach(link => {
-                link.classList.remove('active');
-            });
-            
-            // Add active class to clicked link
-            event.target.classList.add('active');
-            
-            // Scroll to top
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+        // Page navigation functions
+        function showHomePage() {
+            document.getElementById('home-page').style.display = 'block';
+            document.getElementById('form-page').style.display = 'none';
+            document.getElementById('contact-page').style.display = 'none';
+            document.getElementById('faq-page').style.display = 'none';
         }
         
-        // Initialize page
+        function showFormPage() {
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('form-page').style.display = 'block';
+            document.getElementById('contact-page').style.display = 'none';
+            document.getElementById('faq-page').style.display = 'none';
+        }
+        
+        function showContactPage() {
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('form-page').style.display = 'none';
+            document.getElementById('contact-page').style.display = 'block';
+            document.getElementById('faq-page').style.display = 'none';
+        }
+        
+        function showFaqPage() {
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('form-page').style.display = 'none';
+            document.getElementById('contact-page').style.display = 'none';
+            document.getElementById('faq-page').style.display = 'block';
+        }
+        
+        // Initialize with home page
         document.addEventListener('DOMContentLoaded', function() {
+            showHomePage();
+            
             // FAQ toggle functionality
             const faqQuestions = document.querySelectorAll('.faq-question');
             faqQuestions.forEach(question => {
@@ -1205,21 +929,15 @@
             // Form submission handling
             document.getElementById('business-form').addEventListener('submit', function(e) {
                 e.preventDefault();
-                alert('Thank you for your business analysis request! I will review your information and contact you within 24 hours.');
+                alert('Thank you for submitting your business analysis request! We will contact you within 24 hours.');
                 this.reset();
-                showPage('home');
-                event.target.classList.add('active'); // Keep home active
+                showHomePage();
             });
             
             document.getElementById('contact-form').addEventListener('submit', function(e) {
                 e.preventDefault();
-                alert('Your message has been sent successfully! I will respond within 24 hours.');
+                alert('Your message has been sent successfully! We will respond within 24 hours.');
                 this.reset();
-            });
-            
-            // Logo click event
-            document.querySelector('.logo-area').addEventListener('click', function() {
-                showPage('home');
             });
         });
     </script>
