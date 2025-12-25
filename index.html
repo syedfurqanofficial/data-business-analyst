@@ -87,168 +87,248 @@
             cursor: pointer;
         }
         
-        /* Hero Section */
+        /* Hero Section - Original Design */
         .hero {
-            height: 100vh;
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
             color: white;
-            padding: 20px;
-            position: relative;
+            text-align: center;
+            padding: 100px 20px;
+            margin-bottom: 50px;
         }
         
-        .hero-content {
-            max-width: 900px;
-            z-index: 2;
-        }
-        
-        .hero-title {
-            font-size: 48px;
-            margin-bottom: 15px;
-            font-weight: 800;
-            line-height: 1.2;
-        }
-        
-        .hero-subtitle {
-            font-size: 24px;
-            margin-bottom: 40px;
-            opacity: 0.9;
-        }
-        
-        .hero-copy {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 30px;
-            border-radius: 15px;
-            margin-bottom: 40px;
-            border-left: 5px solid #ff8a00;
-        }
-        
-        .hero-copy h3 {
-            font-size: 28px;
+        .hero h1 {
+            font-size: 42px;
             margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .hero .author {
+            font-size: 18px;
+            margin-bottom: 40px;
             color: #ffde59;
         }
         
-        .hero-copy p {
-            font-size: 18px;
-            margin-bottom: 15px;
-            line-height: 1.8;
-        }
-        
-        .hero-copy ul {
-            text-align: left;
-            margin: 20px 0;
-            padding-left: 20px;
-        }
-        
-        .hero-copy li {
-            margin-bottom: 10px;
-            font-size: 17px;
-        }
-        
-        .hero-copy li i {
-            color: #26d0ce;
-            margin-right: 10px;
-        }
-        
-        .cta-highlight {
+        .cta-button {
+            display: inline-block;
             background: linear-gradient(to right, #ff8a00, #da1b60);
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 25px;
-            font-weight: 700;
-            font-size: 20px;
-            box-shadow: 0 4px 15px rgba(255, 138, 0, 0.4);
-        }
-        
-        .hero-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
-        
-        .hero-btn {
-            padding: 18px 40px;
+            color: white;
+            padding: 15px 40px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             font-size: 18px;
             transition: all 0.3s ease;
-            display: inline-block;
-            min-width: 200px;
-            text-align: center;
-        }
-        
-        .contact-btn {
-            background: linear-gradient(to right, #ff8a00, #da1b60);
-            color: white;
             box-shadow: 0 4px 15px rgba(255, 138, 0, 0.4);
+            margin: 10px;
         }
         
-        .contact-btn:hover {
-            transform: translateY(-5px);
+        .cta-button:hover {
+            transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(255, 138, 0, 0.6);
         }
         
-        .projects-btn {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
+        /* Conversion Strategies Section */
+        .conversion-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9f7fe 100%);
+            margin-bottom: 60px;
         }
         
-        .projects-btn:hover {
-            background: white;
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 36px;
             color: #1a2980;
-            transform: translateY(-5px);
-        }
-        
-        /* Quick Contact Form Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            z-index: 1001;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        
-        .modal-content {
-            background: white;
-            border-radius: 12px;
-            padding: 40px;
-            max-width: 500px;
-            width: 100%;
-            max-height: 90vh;
-            overflow-y: auto;
             position: relative;
         }
         
-        .close-modal {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 24px;
-            color: #666;
-            cursor: pointer;
-            background: none;
-            border: none;
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, #1a2980, #26d0ce);
+            margin: 10px auto;
+            border-radius: 2px;
         }
         
-        /* FAQ Section */
+        .strategies-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .strategy-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .strategy-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .strategy-icon {
+            font-size: 40px;
+            color: #26d0ce;
+            margin-bottom: 20px;
+        }
+        
+        .strategy-card h3 {
+            color: #1a2980;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .strategy-card p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .strategy-stats {
+            background: #e9f7fe;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .stat {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .stat:last-child {
+            margin-bottom: 0;
+        }
+        
+        .stat-value {
+            font-weight: 700;
+            color: #1a2980;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 20px;
+            background: white;
+        }
+        
+        .testimonial-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-slider {
+            display: flex;
+            overflow-x: auto;
+            gap: 30px;
+            padding: 20px;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        
+        .testimonial-slider::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .testimonial-card {
+            min-width: 300px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid #26d0ce;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .client-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #26d0ce;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .client-details h4 {
+            color: #1a2980;
+            margin-bottom: 5px;
+        }
+        
+        .client-details p {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* Results Section */
+        .results-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #1a2980, #26d0ce);
+            color: white;
+            text-align: center;
+        }
+        
+        .results-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .result-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 12px;
+            min-width: 250px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .result-value {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: #ffde59;
+        }
+        
+        .result-label {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        /* FAQ Page */
         .faq-page {
             display: none;
             padding: 50px 20px;
@@ -323,21 +403,6 @@
             max-height: 1000px;
         }
         
-        .faq-answer ul {
-            margin: 15px 0;
-            padding-left: 20px;
-        }
-        
-        .faq-answer li {
-            margin-bottom: 10px;
-            color: #666;
-        }
-        
-        .faq-answer li i {
-            color: #26d0ce;
-            margin-right: 10px;
-        }
-        
         /* Projects Page */
         .projects-page {
             display: none;
@@ -403,70 +468,41 @@
             font-weight: 600;
         }
         
-        /* About Section */
-        .about-section {
-            padding: 80px 20px;
-            background: white;
-        }
-        
-        .about-container {
-            display: flex;
+        /* Quick Contact Form Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1001;
             align-items: center;
-            gap: 50px;
-            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
         }
         
-        .about-image {
-            flex: 1;
-            min-width: 300px;
-            text-align: center;
+        .modal-content {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
         }
         
-        .profile-img {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #26d0ce;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .about-content {
-            flex: 2;
-            min-width: 300px;
-        }
-        
-        .about-content h2 {
-            color: #1a2980;
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-        
-        .about-content h3 {
-            color: #26d0ce;
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
             font-size: 24px;
-            margin-bottom: 20px;
-        }
-        
-        .about-content p {
             color: #666;
-            margin-bottom: 20px;
-            line-height: 1.8;
-        }
-        
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 30px;
-        }
-        
-        .skill-item {
-            background: #e9f7fe;
-            color: #1a2980;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-weight: 600;
+            cursor: pointer;
+            background: none;
+            border: none;
         }
         
         /* Footer */
@@ -531,94 +567,88 @@
                 margin-left: 0;
             }
             
-            .hero-title {
-                font-size: 36px;
+            .hero h1 {
+                font-size: 32px;
             }
             
-            .hero-subtitle {
-                font-size: 20px;
+            .hero p {
+                font-size: 18px;
             }
             
-            .hero-copy {
+            .hero {
+                padding: 80px 20px;
+            }
+            
+            .cta-button {
+                display: block;
+                margin: 10px auto;
+                width: 90%;
+                max-width: 300px;
+            }
+            
+            .section-title {
+                font-size: 30px;
+            }
+            
+            .strategy-card {
                 padding: 20px;
             }
             
-            .hero-copy h3 {
-                font-size: 24px;
+            .results-container {
+                gap: 20px;
             }
             
-            .hero-copy p {
-                font-size: 16px;
+            .result-card {
+                min-width: 200px;
+                padding: 20px;
             }
             
-            .cta-highlight {
-                font-size: 18px;
-                padding: 12px;
-            }
-            
-            .hero-btn {
-                padding: 15px 30px;
-                min-width: 100%;
-                margin-bottom: 10px;
-            }
-            
-            .hero-buttons {
-                flex-direction: column;
-                gap: 15px;
+            .result-value {
+                font-size: 36px;
             }
             
             .modal-content {
                 padding: 30px 20px;
             }
             
-            .faq-question {
-                padding: 20px;
-                font-size: 18px;
-            }
-            
             .projects-grid {
                 grid-template-columns: 1fr;
             }
             
-            .about-container {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .project-image {
-                height: 180px;
-            }
-            
-            .faq-intro h2 {
-                font-size: 30px;
+            .testimonial-card {
+                min-width: 280px;
             }
         }
         
         @media (max-width: 480px) {
-            .hero-title {
+            .hero h1 {
                 font-size: 28px;
             }
             
-            .hero-subtitle {
-                font-size: 18px;
+            .hero p {
+                font-size: 16px;
             }
             
-            .hero-copy h3 {
-                font-size: 22px;
+            .cta-button {
+                font-size: 16px;
+                padding: 12px 30px;
+            }
+            
+            .section-title {
+                font-size: 26px;
+            }
+            
+            .result-card {
+                min-width: 100%;
             }
             
             .modal-content {
                 padding: 25px 15px;
             }
             
-            .profile-img {
-                width: 250px;
-                height: 250px;
-            }
-            
             .faq-question {
-                font-size: 16px;
-                padding: 18px;
+                font-size: 18px;
+                padding: 20px;
             }
         }
     </style>
@@ -647,65 +677,179 @@
 
     <!-- Home Page -->
     <section id="home-page">
-        <!-- Hero Section -->
+        <!-- Hero Section - Original Layout -->
         <div class="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">Syed Furqan</h1>
-                <h2 class="hero-subtitle">Data Business Analyst</h2>
-                
-                <!-- Ad Copy Text -->
-                <div class="hero-copy">
-                    <h3>🚀 Stop Guessing, Start Growing with Data!</h3>
-                    <p>Is your business making decisions based on gut feelings instead of data? You're leaving money on the table!</p>
-                    
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> <strong>40% of businesses fail</strong> because they don't understand their data</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>3 out of 5 companies</strong> don't track their most important metrics</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Data-driven companies</strong> are 23x more likely to acquire customers</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Businesses using analytics</strong> see 8% higher profitability</li>
-                    </ul>
-                    
-                    <p>I've helped 50+ businesses increase their revenue by 30-300% using simple data analytics strategies.</p>
-                    
-                    <div class="cta-highlight">
-                        📞 Book a FREE 30-minute Data Strategy Session Today!
-                    </div>
-                </div>
-                
-                <div class="hero-buttons">
-                    <a href="#" class="hero-btn contact-btn" onclick="openContactModal()">
-                        <i class="fas fa-calendar-check"></i> Book FREE Consultation
-                    </a>
-                    <a href="#" class="hero-btn projects-btn" onclick="showProjectsPage()">
-                        <i class="fas fa-chart-bar"></i> See My Projects
-                    </a>
-                </div>
+            <h1>Data Analytics Solutions</h1>
+            <p class="author">Created By <strong>Syed Furqan</strong></p>
+            <p>These analytics services will transform your business in Pakistan or international markets with highest level of profitability and minimum risk.</p>
+            <div>
+                <a href="#" class="cta-button" onclick="openContactModal()">Start Growing Today</a>
+                <a href="#" class="cta-button" onclick="showFaqPage()">Learn More 💹</a>
             </div>
         </div>
 
-        <!-- About Section -->
-        <section class="about-section">
-            <div class="container">
-                <div class="about-container">
-                    <div class="about-image">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Syed Furqan" class="profile-img">
+        <!-- Conversion Strategies Section -->
+        <div class="container">
+            <section class="conversion-section">
+                <h2 class="section-title">Proven Strategies to Convert Clients</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: #666; font-size: 18px;">
+                    I use these data-driven strategies to help businesses identify opportunities and convert them into tangible results.
+                </p>
+                
+                <div class="strategies-container">
+                    <!-- Strategy 1 -->
+                    <div class="strategy-card">
+                        <div class="strategy-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Targeted Lead Identification</h3>
+                        <p>Using data analytics to identify your most profitable customer segments and create targeted marketing campaigns that convert 3x better than traditional methods.</p>
+                        <div class="strategy-stats">
+                            <div class="stat">
+                                <span>Conversion Rate Increase:</span>
+                                <span class="stat-value">40-300%</span>
+                            </div>
+                            <div class="stat">
+                                <span>Cost Per Lead Reduction:</span>
+                                <span class="stat-value">35-60%</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="about-content">
-                        <h2>About Me</h2>
-                        <h3>Data Business Analyst</h3>
-                        <p>I transform raw data into actionable business insights. With expertise in data analysis, business intelligence, and strategic planning, I help businesses make data-driven decisions that drive growth and optimize operations.</p>
-                        <p>My approach combines technical data analysis skills with deep business understanding to deliver solutions that are both analytically sound and commercially viable.</p>
-                        
-                        <div class="skills-list">
-                            <div class="skill-item">Data Analysis</div>
-                            <div class="skill-item">Business Intelligence</div>
-                            <div class="skill-item">SQL & Databases</div>
-                            <div class="skill-item">Data Visualization</div>
-                            <div class="skill-item">Process Optimization</div>
-                            <div class="skill-item">Strategic Planning</div>
+                    
+                    <!-- Strategy 2 -->
+                    <div class="strategy-card">
+                        <div class="strategy-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Sales Funnel Optimization</h3>
+                        <p>Analyze every step of your customer journey to identify drop-off points and implement data-backed optimizations that significantly increase conversions.</p>
+                        <div class="strategy-stats">
+                            <div class="stat">
+                                <span>Funnel Efficiency:</span>
+                                <span class="stat-value">2-4x Improvement</span>
+                            </div>
+                            <div class="stat">
+                                <span>Customer Acquisition:</span>
+                                <span class="stat-value">50-150% Faster</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Strategy 3 -->
+                    <div class="strategy-card">
+                        <div class="strategy-icon">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <h3>Customer Retention Analytics</h3>
+                        <p>Predict which customers are likely to churn and implement proactive retention strategies that keep your best customers engaged and loyal.</p>
+                        <div class="strategy-stats">
+                            <div class="stat">
+                                <span>Retention Rate:</span>
+                                <span class="stat-value">25-40% Higher</span>
+                            </div>
+                            <div class="stat">
+                                <span>Customer Lifetime Value:</span>
+                                <span class="stat-value">3-5x Increase</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Strategy 4 -->
+                    <div class="strategy-card">
+                        <div class="strategy-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <h3>ROI-Focused Marketing</h3>
+                        <p>Track and analyze every marketing dollar to identify highest-ROI channels and campaigns, eliminating wasted spend and maximizing returns.</p>
+                        <div class="strategy-stats">
+                            <div class="stat">
+                                <span>Marketing ROI:</span>
+                                <span class="stat-value">2-4x Higher</span>
+                            </div>
+                            <div class="stat">
+                                <span>Budget Efficiency:</span>
+                                <span class="stat-value">45% More Efficient</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </section>
+        </div>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">Client Success Stories</h2>
+                <div class="testimonial-slider">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Syed Furqan helped us identify hidden opportunities in our sales data that increased our revenue by 150% in just 3 months. His data-driven approach transformed our decision-making process."</p>
+                        <div class="client-info">
+                            <div class="client-avatar">AS</div>
+                            <div class="client-details">
+                                <h4>Ahmed Sheikh</h4>
+                                <p>CEO, Tech Solutions Inc.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"The conversion optimization strategies implemented by Syed reduced our customer acquisition cost by 55% while doubling our conversion rate. Best investment we ever made!"</p>
+                        <div class="client-info">
+                            <div class="client-avatar">MR</div>
+                            <div class="client-details">
+                                <h4>Maria Raza</h4>
+                                <p>Marketing Director, FashionHub</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Working with Syed was a game-changer. His analytics insights helped us streamline operations and identify new revenue streams that added $50,000 monthly to our bottom line."</p>
+                        <div class="client-info">
+                            <div class="client-avatar">SK</div>
+                            <div class="client-details">
+                                <h4>Saad Khan</h4>
+                                <p>Operations Manager, SupplyChain Pro</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-section">
+            <div class="container">
+                <h2 style="font-size: 36px; margin-bottom: 20px;">Proven Results You Can Expect</h2>
+                <p style="max-width: 800px; margin: 0 auto 40px; font-size: 18px; opacity: 0.9;">
+                    Here's what my clients typically achieve within the first 90 days of implementing data-driven strategies
+                </p>
+                
+                <div class="results-container">
+                    <div class="result-card">
+                        <div class="result-value">40-300%</div>
+                        <div class="result-label">Increase in Conversions</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value">25-60%</div>
+                        <div class="result-label">Reduction in CAC</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value">3-5x</div>
+                        <div class="result-label">Higher Customer LTV</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value">30-90</div>
+                        <div class="result-label">Days to See Results</div>
+                    </div>
+                </div>
+                
+                <a href="#" class="cta-button" onclick="openContactModal()" style="margin-top: 50px; background: white; color: #1a2980;">
+                    <i class="fas fa-calendar-check"></i> Get Your Free Strategy Session
+                </a>
             </div>
         </section>
     </section>
@@ -719,156 +863,52 @@
             </div>
             
             <div class="faq-container">
-                <!-- FAQ 1 -->
+                <!-- FAQ Items (same as before) -->
                 <div class="faq-item active">
                     <div class="faq-question">
                         <span>What exactly does a Data Business Analyst do?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>A Data Business Analyst bridges the gap between raw data and business decisions. I help you:</p>
-                        <ul>
-                            <li><i class="fas fa-chart-line"></i> Analyze your business data to identify trends and patterns</li>
-                            <li><i class="fas fa-search"></i> Find hidden opportunities for growth and cost-saving</li>
-                            <li><i class="fas fa-bullseye"></i> Set up key performance indicators (KPIs) to track progress</li>
-                            <li><i class="fas fa-lightbulb"></i> Provide actionable insights for better decision-making</li>
-                            <li><i class="fas fa-tachometer-alt"></i> Create dashboards to monitor business health in real-time</li>
-                        </ul>
+                        <p>A Data Business Analyst bridges the gap between raw data and business decisions. I help you analyze business data to identify trends, find hidden opportunities, set up KPIs, and provide actionable insights for better decision-making.</p>
                     </div>
                 </div>
                 
-                <!-- FAQ 2 -->
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>How much does data analytics services cost?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>My services start from PKR 25,000/month, but the exact cost depends on:</p>
-                        <ul>
-                            <li><i class="fas fa-database"></i> <strong>Size of your business</strong> - Small businesses vs enterprises</li>
-                            <li><i class="fas fa-project-diagram"></i> <strong>Complexity of your data</strong> - Simple sales data vs multi-source data</li>
-                            <li><i class="fas fa-tasks"></i> <strong>Scope of work</strong> - Basic reporting vs advanced analytics</li>
-                            <li><i class="fas fa-clock"></i> <strong>Time commitment</strong> - Monthly vs project-based</li>
-                        </ul>
-                        <p><strong>Most clients see 3-5x ROI</strong> on their investment within the first 3 months.</p>
+                        <p>My services start from PKR 25,000/month, but the exact cost depends on your business size, data complexity, and scope of work. Most clients see 3-5x ROI on their investment within the first 3 months.</p>
                     </div>
                 </div>
                 
-                <!-- FAQ 3 -->
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>How long does it take to see results?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Here's a typical timeline:</p>
-                        <ul>
-                            <li><i class="fas fa-calendar-week"></i> <strong>Week 1-2:</strong> Initial setup, data collection, and analysis</li>
-                            <li><i class="fas fa-chart-bar"></i> <strong>Week 3-4:</strong> First insights and quick-win recommendations</li>
-                            <li><i class="fas fa-rocket"></i> <strong>Month 2:</strong> Implementation and measurable improvements</li>
-                            <li><i class="fas fa-trophy"></i> <strong>Month 3:</strong> Significant ROI and optimized processes</li>
-                        </ul>
-                        <p>Most clients see initial improvements within 30 days and full results within 90 days.</p>
+                        <p>Most clients see initial insights within 1-2 weeks, quick wins in 3-4 weeks, and significant improvements within 60-90 days as we implement data-driven optimizations.</p>
                     </div>
                 </div>
                 
-                <!-- FAQ 4 -->
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>What if I don't have any data tracking setup?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>No problem at all! I help businesses at every stage:</p>
-                        <ul>
-                            <li><i class="fas fa-cogs"></i> <strong>Starting from zero:</strong> I'll help set up basic tracking systems</li>
-                            <li><i class="fas fa-download"></i> <strong>Existing data:</strong> I'll organize and analyze what you have</li>
-                            <li><i class="fas fa-tools"></i> <strong>Manual records:</strong> Even Excel sheets can be turned into insights</li>
-                            <li><i class="fas fa-sync-alt"></i> <strong>Automated systems:</strong> Set up ongoing tracking and reporting</li>
-                        </ul>
-                        <p>Many of my most successful projects started with clients who had no data tracking at all!</p>
-                    </div>
-                </div>
-                
-                <!-- FAQ 5 -->
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>What makes you different from other analysts?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Three key differentiators:</p>
-                        <ul>
-                            <li><i class="fas fa-business-time"></i> <strong>Business-first approach:</strong> I focus on actionable insights that drive revenue, not just pretty charts</li>
-                            <li><i class="fas fa-hands-helping"></i> <strong>Hands-on implementation:</strong> I don't just give reports - I help implement changes</li>
-                            <li><i class="fas fa-language"></i> <strong>Plain English explanations:</strong> No technical jargon - I explain everything in simple business terms</li>
-                            <li><i class="fas fa-money-bill-wave"></i> <strong>ROI guarantee:</strong> My services pay for themselves through identified opportunities</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- FAQ 6 -->
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>What information do you need from me to start?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>To get started, I need:</p>
-                        <ul>
-                            <li><i class="fas fa-file-invoice-dollar"></i> <strong>Sales data</strong> (if available)</li>
-                            <li><i class="fas fa-users"></i> <strong>Customer information</strong></li>
-                            <li><i class="fas fa-shopping-cart"></i> <strong>Product/service details</strong></li>
-                            <li><i class="fas fa-bullhorn"></i> <strong>Marketing efforts</strong> and results</li>
-                            <li><i class="fas fa-bullseye"></i> <strong>Your business goals</strong> and challenges</li>
-                        </ul>
-                        <p>Don't worry if you don't have all of these - we can start with whatever you have and build from there.</p>
-                    </div>
-                </div>
-                
-                <!-- FAQ 7 -->
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Can you help with specific business problems?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Absolutely! Common problems I solve include:</p>
-                        <ul>
-                            <li><i class="fas fa-chart-line"></i> <strong>Low conversion rates:</strong> Identify why visitors don't become customers</li>
-                            <li><i class="fas fa-user-slash"></i> <strong>High customer churn:</strong> Understand why customers leave</li>
-                            <li><i class="fas fa-money-bill-wave"></i> <strong>Poor marketing ROI:</strong> Find which channels work and which don't</li>
-                            <li><i class="fas fa-tachometer-alt"></i> <strong>Inefficient operations:</strong> Streamline processes to save time/money</li>
-                            <li><i class="fas fa-search-dollar"></i> <strong>Unclear growth opportunities:</strong> Find untapped markets/products</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- FAQ 8 -->
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>What's included in your free consultation?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>During our FREE 30-minute consultation, you'll get:</p>
-                        <ul>
-                            <li><i class="fas fa-search"></i> <strong>Quick data health check</strong> of your current setup</li>
-                            <li><i class="fas fa-lightbulb"></i> <strong>2-3 immediate opportunities</strong> I can identify</li>
-                            <li><i class="fas fa-map"></i> <strong>Customized roadmap</strong> for your data journey</li>
-                            <li><i class="fas fa-calculator"></i> <strong>ROD estimation</strong> (Return on Data investment)</li>
-                            <li><i class="fas fa-question-circle"></i> <strong>Answers to all your questions</strong> with no obligation</li>
-                        </ul>
-                        <p>This consultation alone has helped businesses identify 5-6 figure opportunities.</p>
+                        <p>No problem! I help businesses at every stage - from setting up basic tracking systems to organizing existing data. Many successful projects started with clients who had no data tracking at all.</p>
                     </div>
                 </div>
             </div>
             
             <div style="text-align: center; margin-top: 50px;">
-                <button class="hero-btn contact-btn" onclick="openContactModal()" style="padding: 18px 50px; font-size: 18px;">
+                <a href="#" class="cta-button" onclick="openContactModal()" style="padding: 18px 50px; font-size: 18px;">
                     <i class="fas fa-calendar-check"></i> Book Your FREE Consultation Now
-                </button>
+                </a>
             </div>
         </div>
     </section>
@@ -882,7 +922,7 @@
             </p>
             
             <div class="projects-grid">
-                <!-- Project 1 -->
+                <!-- Project Cards (same as before) -->
                 <div class="project-card">
                     <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80');"></div>
                     <div class="project-content">
@@ -897,7 +937,6 @@
                     </div>
                 </div>
 
-                <!-- Project 2 -->
                 <div class="project-card">
                     <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80');"></div>
                     <div class="project-content">
@@ -912,7 +951,6 @@
                     </div>
                 </div>
 
-                <!-- Project 3 -->
                 <div class="project-card">
                     <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80');"></div>
                     <div class="project-content">
@@ -926,57 +964,12 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 4 -->
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80');"></div>
-                    <div class="project-content">
-                        <h3 class="project-title">Financial Performance Dashboard</h3>
-                        <p class="project-description">Built an interactive financial dashboard for a manufacturing company to track revenue, expenses, and profitability metrics.</p>
-                        <div class="project-tools">
-                            <span class="tool-tag">Power BI</span>
-                            <span class="tool-tag">Excel</span>
-                            <span class="tool-tag">SQL Server</span>
-                            <span class="tool-tag">Financial Modeling</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80');"></div>
-                    <div class="project-content">
-                        <h3 class="project-title">Marketing ROI Analysis</h3>
-                        <p class="project-description">Analyzed marketing campaign data across multiple channels to optimize budget allocation and improve ROI by 60%.</p>
-                        <div class="project-tools">
-                            <span class="tool-tag">Google Analytics</span>
-                            <span class="tool-tag">Facebook Insights</span>
-                            <span class="tool-tag">Excel</span>
-                            <span class="tool-tag">ROI Modeling</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 6 -->
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80');"></div>
-                    <div class="project-content">
-                        <h3 class="project-title">Healthcare Data Analysis</h3>
-                        <p class="project-description">Analyzed patient data to identify patterns and improve healthcare service delivery efficiency by 40%.</p>
-                        <div class="project-tools">
-                            <span class="tool-tag">Python</span>
-                            <span class="tool-tag">Pandas</span>
-                            <span class="tool-tag">Statistical Analysis</span>
-                            <span class="tool-tag">Data Visualization</span>
-                        </div>
-                    </div>
-                </div>
             </div>
             
             <div style="text-align: center; margin-top: 50px;">
-                <button class="hero-btn contact-btn" onclick="openContactModal()" style="padding: 18px 50px; font-size: 18px;">
+                <a href="#" class="cta-button" onclick="openContactModal()" style="padding: 18px 50px; font-size: 18px;">
                     <i class="fas fa-paper-plane"></i> Start Your Project
-                </button>
+                </a>
             </div>
         </div>
     </section>
@@ -1021,14 +1014,7 @@
                     <textarea class="form-control" rows="4" placeholder="Briefly describe your business and what you hope to achieve with data analytics... *" required></textarea>
                 </div>
                 
-                <div class="form-group">
-                    <label style="display: flex; align-items: center; font-size: 14px; color: #666;">
-                        <input type="checkbox" required style="margin-right: 10px;">
-                        I agree to receive a FREE 30-minute data strategy consultation
-                    </label>
-                </div>
-                
-                <button type="submit" class="hero-btn contact-btn" style="width: 100%; margin-top: 20px;">
+                <button type="submit" class="cta-button" style="width: 100%; margin-top: 20px;">
                     <i class="fas fa-calendar-check"></i> Book FREE Session Now
                 </button>
             </form>
@@ -1071,7 +1057,6 @@
             document.getElementById('projects-page').style.display = 'block';
             document.getElementById('faq-page').style.display = 'none';
             closeContactModal();
-            // Scroll to top of projects page
             window.scrollTo({top: 0, behavior: 'smooth'});
         }
         
@@ -1080,7 +1065,6 @@
             document.getElementById('projects-page').style.display = 'none';
             document.getElementById('faq-page').style.display = 'block';
             closeContactModal();
-            // Scroll to top of FAQ page
             window.scrollTo({top: 0, behavior: 'smooth'});
         }
         
@@ -1107,7 +1091,6 @@
                     const item = question.parentElement;
                     item.classList.toggle('active');
                     
-                    // Close other FAQs if needed
                     const allItems = document.querySelectorAll('.faq-item');
                     allItems.forEach(otherItem => {
                         if (otherItem !== item && otherItem.classList.contains('active')) {
@@ -1151,8 +1134,25 @@
                 }
             }
             
-            // Initial adjustment
+            // Testimonial slider auto-scroll
+            function autoScrollTestimonials() {
+                const slider = document.querySelector('.testimonial-slider');
+                if (slider) {
+                    let scrollAmount = 0;
+                    const slideTimer = setInterval(() => {
+                        slider.scrollLeft += 1;
+                        scrollAmount += 1;
+                        if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
+                            slider.scrollLeft = 0;
+                            scrollAmount = 0;
+                        }
+                    }, 30);
+                }
+            }
+            
+            // Initial adjustments
             adjustMobileMenu();
+            autoScrollTestimonials();
             
             // Adjust on window resize
             window.addEventListener('resize', adjustMobileMenu);
