@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Analytics Solutions - Transform Your Business with Data</title>
+    <title>Syed Furqan | Data Business Analyst</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -29,8 +29,11 @@
         header {
             background: linear-gradient(135deg, #1a2980, #26d0ce);
             color: white;
-            padding: 20px 0;
+            padding: 15px 0;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         
         .header-content {
@@ -40,7 +43,7 @@
         }
         
         .logo {
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 700;
             display: flex;
             align-items: center;
@@ -48,7 +51,7 @@
         
         .logo i {
             margin-right: 10px;
-            font-size: 32px;
+            font-size: 28px;
         }
         
         nav ul {
@@ -57,77 +60,152 @@
         }
         
         nav ul li {
-            margin-left: 25px;
+            margin-left: 20px;
         }
         
         nav ul li a {
             color: white;
             text-decoration: none;
             font-weight: 600;
-            font-size: 16px;
+            font-size: 15px;
             transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 4px;
         }
         
         nav ul li a:hover {
-            color: #ffde59;
-            text-decoration: underline;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
         }
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80');
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80');
             background-size: cover;
             background-position: center;
-            color: white;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 120px 20px;
-            margin-bottom: 50px;
+            color: white;
+            padding: 20px;
         }
         
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            font-weight: 800;
-        }
-        
-        .hero p {
-            font-size: 22px;
+        .hero-content {
             max-width: 800px;
-            margin: 0 auto 30px;
+        }
+        
+        .hero-title {
+            font-size: 48px;
+            margin-bottom: 15px;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 24px;
+            margin-bottom: 40px;
             opacity: 0.9;
         }
         
-        .highlight {
-            color: #26d0ce;
-            font-weight: 700;
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
         
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(to right, #ff8a00, #da1b60);
-            color: white;
-            padding: 18px 45px;
+        .hero-btn {
+            padding: 18px 40px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             font-size: 18px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 138, 0, 0.4);
-            margin-top: 20px;
+            display: inline-block;
+            min-width: 200px;
+            text-align: center;
         }
         
-        .cta-button:hover {
-            transform: translateY(-3px);
+        .contact-btn {
+            background: linear-gradient(to right, #ff8a00, #da1b60);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 138, 0, 0.4);
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-5px);
             box-shadow: 0 6px 20px rgba(255, 138, 0, 0.6);
         }
         
-        /* Analytics Services Section */
+        .projects-btn {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .projects-btn:hover {
+            background: white;
+            color: #1a2980;
+            transform: translateY(-5px);
+        }
+        
+        /* Quick Contact Form Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1001;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 24px;
+            color: #666;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        
+        /* Services Section */
         .section-title {
             text-align: center;
             margin-bottom: 50px;
             font-size: 36px;
             color: #1a2980;
             position: relative;
+            padding-top: 80px;
         }
         
         .section-title:after {
@@ -211,103 +289,69 @@
             margin-right: 10px;
         }
         
-        .price {
-            font-size: 28px;
-            font-weight: 700;
-            color: #1a2980;
-            margin-bottom: 20px;
-            text-align: center;
+        /* Projects Page */
+        .projects-page {
+            display: none;
+            padding: 50px 20px;
+            background-color: #f8f9fa;
         }
         
-        .price span {
-            font-size: 16px;
-            color: #777;
-            font-weight: normal;
-        }
-        
-        .enroll-btn {
-            display: block;
-            width: 100%;
-            background: linear-gradient(to right, #1a2980, #26d0ce);
-            color: white;
-            border: none;
-            padding: 15px;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 16px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .enroll-btn:hover {
-            background: linear-gradient(to right, #26d0ce, #1a2980);
-        }
-        
-        /* Case Studies Section */
-        .case-studies-container {
+        .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 30px;
-            margin-bottom: 80px;
+            margin-top: 40px;
         }
         
-        .case-study-card {
+        .project-card {
             background: white;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease;
         }
         
-        .case-study-card:hover {
-            transform: translateY(-5px);
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
         }
         
-        .case-study-img {
-            height: 200px;
+        .project-image {
+            height: 220px;
             background-size: cover;
             background-position: center;
         }
         
-        .case-study-info {
-            padding: 20px;
+        .project-content {
+            padding: 25px;
         }
         
-        .case-study-info h3 {
+        .project-title {
             color: #1a2980;
-            margin-bottom: 10px;
             font-size: 22px;
+            margin-bottom: 10px;
         }
         
-        .case-study-info p {
+        .project-description {
             color: #666;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            line-height: 1.6;
         }
         
-        .results {
-            background: #e9f7fe;
-            padding: 15px;
-            border-radius: 8px;
+        .project-tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
             margin-top: 15px;
         }
         
-        .results h4 {
+        .tool-tag {
+            background: #e9f7fe;
             color: #1a2980;
-            margin-bottom: 10px;
-        }
-        
-        .results ul {
-            list-style: none;
-        }
-        
-        .results li {
-            padding: 5px 0;
-            color: #555;
-        }
-        
-        .results li i {
-            color: #4CAF50;
-            margin-right: 10px;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
         }
         
         /* Metrics Dashboard Preview */
@@ -348,172 +392,70 @@
             opacity: 0.9;
         }
         
-        /* Form Page Styles */
-        .form-page {
-            display: none;
-            padding: 50px 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .form-container {
+        /* About Section */
+        .about-section {
+            padding: 80px 20px;
             background: white;
-            border-radius: 12px;
-            padding: 40px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
         }
         
-        .form-title {
-            text-align: center;
-            color: #1a2980;
-            margin-bottom: 30px;
-            font-size: 32px;
-        }
-        
-        .form-group {
-            margin-bottom: 25px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #333;
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: border 0.3s ease;
-        }
-        
-        .form-control:focus {
-            border-color: #26d0ce;
-            outline: none;
-        }
-        
-        .form-row {
+        .about-container {
             display: flex;
-            gap: 20px;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
         }
         
-        .form-row .form-group {
+        .about-image {
             flex: 1;
+            min-width: 300px;
+            text-align: center;
         }
         
-        .submit-btn {
-            background: linear-gradient(to right, #1a2980, #26d0ce);
-            color: white;
-            border: none;
-            padding: 15px 40px;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 18px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: block;
-            margin: 30px auto 0;
+        .profile-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #26d0ce;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
         
-        .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(38, 208, 206, 0.4);
+        .about-content {
+            flex: 2;
+            min-width: 300px;
         }
         
-        /* Contact Page */
-        .contact-page {
-            display: none;
-            padding: 50px 20px;
+        .about-content h2 {
+            color: #1a2980;
+            font-size: 36px;
+            margin-bottom: 20px;
         }
         
-        .contact-container {
+        .about-content h3 {
+            color: #26d0ce;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .about-content p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .skills-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 40px;
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            gap: 15px;
+            margin-top: 30px;
         }
         
-        .contact-info {
-            flex: 1;
-            padding: 40px;
-            background: linear-gradient(135deg, #1a2980, #26d0ce);
-            color: white;
-            min-width: 300px;
-        }
-        
-        .contact-form {
-            flex: 1;
-            padding: 40px;
-            min-width: 300px;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 25px;
-        }
-        
-        .contact-icon {
-            background: rgba(255, 255, 255, 0.2);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            font-size: 20px;
-        }
-        
-        /* FAQ Section */
-        .faq-page {
-            display: none;
-            padding: 50px 20px;
-        }
-        
-        .faq-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .faq-item {
-            background: white;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-        }
-        
-        .faq-question {
-            padding: 20px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .skill-item {
+            background: #e9f7fe;
+            color: #1a2980;
+            padding: 10px 20px;
+            border-radius: 25px;
             font-weight: 600;
-            font-size: 18px;
-        }
-        
-        .faq-question:hover {
-            background: #f8f9fa;
-        }
-        
-        .faq-answer {
-            padding: 0 20px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s ease;
-        }
-        
-        .faq-item.active .faq-answer {
-            padding: 20px;
-            max-height: 500px;
         }
         
         /* Footer */
@@ -522,7 +464,6 @@
             color: white;
             padding: 40px 20px;
             text-align: center;
-            margin-top: 50px;
         }
         
         .footer-content {
@@ -541,10 +482,18 @@
             color: white;
             font-size: 22px;
             transition: color 0.3s ease;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .social-icons a:hover {
-            color: #26d0ce;
+            background: #26d0ce;
+            transform: translateY(-3px);
         }
         
         .copyright {
@@ -553,42 +502,99 @@
             font-size: 14px;
         }
         
-        /* Responsive */
+        /* Responsive Design */
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
                 text-align: center;
+                gap: 15px;
             }
             
             nav ul {
-                margin-top: 20px;
-                justify-content: center;
                 flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
             }
             
             nav ul li {
-                margin: 5px 10px;
+                margin-left: 0;
             }
             
-            .hero h1 {
+            .hero-title {
                 font-size: 36px;
             }
             
-            .hero p {
-                font-size: 18px;
+            .hero-subtitle {
+                font-size: 20px;
             }
             
-            .form-row {
-                flex-direction: column;
-                gap: 0;
+            .hero-btn {
+                padding: 15px 30px;
+                min-width: 100%;
+                margin-bottom: 10px;
             }
             
-            .contact-container {
+            .hero-buttons {
                 flex-direction: column;
+                gap: 15px;
+            }
+            
+            .modal-content {
+                padding: 30px 20px;
+            }
+            
+            .section-title {
+                font-size: 30px;
+                padding-top: 40px;
+            }
+            
+            .service-card {
+                width: 100%;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-container {
+                flex-direction: column;
+                text-align: center;
             }
             
             .metric {
                 min-width: 150px;
+                padding: 20px;
+            }
+            
+            .metric-value {
+                font-size: 32px;
+            }
+            
+            .project-image {
+                height: 180px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 28px;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .section-title {
+                font-size: 26px;
+            }
+            
+            .modal-content {
+                padding: 25px 15px;
+            }
+            
+            .profile-img {
+                width: 250px;
+                height: 250px;
             }
         }
     </style>
@@ -599,16 +605,19 @@
         <div class="container header-content">
             <div class="logo">
                 <i class="fas fa-chart-line"></i>
-                DataPro Analytics
+                Syed Furqan
             </div>
-            <nav>
+            <nav id="main-nav">
                 <ul>
                     <li><a href="#" onclick="showHomePage()">Home</a></li>
-                    <li><a href="#" onclick="showFormPage()">Get Analytics Solution</a></li>
-                    <li><a href="#" onclick="showContactPage()">Contact</a></li>
-                    <li><a href="#" onclick="showFaqPage()">FAQ</a></li>
+                    <li><a href="#" onclick="showProjectsPage()">Projects</a></li>
+                    <li><a href="#" onclick="showServicesPage()">Services</a></li>
+                    <li><a href="#" onclick="openContactModal()">Contact</a></li>
                 </ul>
             </nav>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
 
@@ -616,391 +625,393 @@
     <section id="home-page">
         <!-- Hero Section -->
         <div class="hero">
-            <h1>Data Analytics Solutions for eCommerce Success</h1>
-            <p>Created By <strong>DataPro Analytics Team</strong></p>
-            <p>Transform your eCommerce business with <span class="highlight">data-driven insights</span> that increase conversions by 40-300%. We analyze your data to uncover hidden opportunities and optimize every touchpoint.</p>
-            <a href="#" class="cta-button" onclick="showFormPage()">Get Your FREE Analytics Audit</a>
+            <div class="hero-content">
+                <h1 class="hero-title">Syed Furqan</h1>
+                <h2 class="hero-subtitle">Data Business Analyst</h2>
+                <div class="hero-buttons">
+                    <a href="#" class="hero-btn contact-btn" onclick="openContactModal()">
+                        <i class="fas fa-envelope"></i> Contact Me
+                    </a>
+                    <a href="#" class="hero-btn projects-btn" onclick="showProjectsPage()">
+                        <i class="fas fa-chart-bar"></i> See Projects
+                    </a>
+                </div>
+            </div>
         </div>
 
-        <div class="container">
-            <!-- Analytics Services Section -->
-            <h2 class="section-title">Our Data Analytics Services</h2>
-            <div class="services-container">
-                <!-- Customer Analytics -->
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <i class="fas fa-users"></i>
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="about-container">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Syed Furqan" class="profile-img">
+                    </div>
+                    <div class="about-content">
+                        <h2>About Me</h2>
+                        <h3>Data Business Analyst</h3>
+                        <p>I transform raw data into actionable business insights. With expertise in data analysis, business intelligence, and strategic planning, I help businesses make data-driven decisions that drive growth and optimize operations.</p>
+                        <p>My approach combines technical data analysis skills with deep business understanding to deliver solutions that are both analytically sound and commercially viable.</p>
+                        
+                        <div class="skills-list">
+                            <div class="skill-item">Data Analysis</div>
+                            <div class="skill-item">Business Intelligence</div>
+                            <div class="skill-item">SQL & Databases</div>
+                            <div class="skill-item">Data Visualization</div>
+                            <div class="skill-item">Process Optimization</div>
+                            <div class="skill-item">Strategic Planning</div>
                         </div>
-                        <h3>CUSTOMER ANALYTICS</h3>
-                        <p>Understand your customers better</p>
-                    </div>
-                    <div class="service-body">
-                        <p class="service-description">Deep dive into customer behavior, segmentation, and lifetime value analysis to increase retention and conversions.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Customer segmentation analysis</li>
-                            <li><i class="fas fa-check"></i> Purchase behavior patterns</li>
-                            <li><i class="fas fa-check"></i> Churn prediction modeling</li>
-                            <li><i class="fas fa-check"></i> Lifetime value calculation</li>
-                            <li><i class="fas fa-check"></i> Personalization recommendations</li>
-                        </ul>
-                        <div class="price">Starting at PKR 25,000<span>/month</span></div>
-                        <button class="enroll-btn" onclick="showFormPage()">GET STARTED</button>
-                    </div>
-                </div>
-
-                <!-- Sales Funnel Analytics -->
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <i class="fas fa-filter"></i>
-                        </div>
-                        <h3>SALES FUNNEL ANALYTICS</h3>
-                        <p>Optimize your conversion path</p>
-                    </div>
-                    <div class="service-body">
-                        <p class="service-description">Identify drop-off points in your sales funnel and implement data-backed optimizations to increase conversions.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Funnel visualization & analysis</li>
-                            <li><i class="fas fa-check"></i> Drop-off point identification</li>
-                            <li><i class="fas fa-check"></i> A/B testing recommendations</li>
-                            <li><i class="fas fa-check"></i> Conversion rate optimization</li>
-                            <li><i class="fas fa-check"></i> Multi-touch attribution</li>
-                        </ul>
-                        <div class="price">Starting at PKR 30,000<span>/month</span></div>
-                        <button class="enroll-btn" onclick="showFormPage()">GET STARTED</button>
-                    </div>
-                </div>
-
-                <!-- Marketing Analytics -->
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <i class="fas fa-bullseye"></i>
-                        </div>
-                        <h3>MARKETING ANALYTICS</h3>
-                        <p>Maximize your marketing ROI</p>
-                    </div>
-                    <div class="service-body">
-                        <p class="service-description">Track, measure, and optimize your marketing campaigns with comprehensive analytics and reporting.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Campaign performance tracking</li>
-                            <li><i class="fas fa-check"></i> ROI analysis by channel</li>
-                            <li><i class="fas fa-check"></i> Customer acquisition cost</li>
-                            <li><i class="fas fa-check"></i> Multi-channel attribution</li>
-                            <li><i class="fas fa-check"></i> Predictive campaign modeling</li>
-                        </ul>
-                        <div class="price">Starting at PKR 35,000<span>/month</span></div>
-                        <button class="enroll-btn" onclick="showFormPage()">GET STARTED</button>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Case Studies Section -->
-            <h2 class="section-title">Client Success Stories</h2>
-            <div class="case-studies-container">
-                <!-- Case Study 1 -->
-                <div class="case-study-card">
-                    <div class="case-study-img" style="background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80');"></div>
-                    <div class="case-study-info">
-                        <h3>Eco-Friendly Products Store</h3>
-                        <p>Implemented customer analytics to identify high-value segments and personalize marketing campaigns.</p>
-                        <div class="results">
-                            <h4>Results Achieved:</h4>
-                            <ul>
-                                <li><i class="fas fa-chart-line"></i> 68% increase in conversion rate</li>
-                                <li><i class="fas fa-money-bill-wave"></i> 42% reduction in customer acquisition cost</li>
-                                <li><i class="fas fa-user-friends"></i> 3.2x increase in customer lifetime value</li>
-                            </ul>
+        <!-- Services Section -->
+        <div class="container">
+            <h2 class="section-title">My Data Analytics Services</h2>
+            <div class="services-container">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-database"></i>
                         </div>
+                        <h3>Business Intelligence</h3>
+                        <p>Transform data into insights</p>
+                    </div>
+                    <div class="service-body">
+                        <p class="service-description">Comprehensive BI solutions including dashboard creation, KPI tracking, and performance monitoring.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Interactive Dashboards</li>
+                            <li><i class="fas fa-check"></i> Real-time Reporting</li>
+                            <li><i class="fas fa-check"></i> KPI Development</li>
+                            <li><i class="fas fa-check"></i> Performance Analytics</li>
+                            <li><i class="fas fa-check"></i> Automated Reports</li>
+                        </ul>
+                        <button class="enroll-btn" onclick="openContactModal()">Get Started</button>
                     </div>
                 </div>
 
-                <!-- Case Study 2 -->
-                <div class="case-study-card">
-                    <div class="case-study-img" style="background-image: url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80');"></div>
-                    <div class="case-study-info">
-                        <h3>Fashion Accessories Brand</h3>
-                        <p>Sales funnel optimization identified critical drop-off points and increased overall conversions.</p>
-                        <div class="results">
-                            <h4>Results Achieved:</h4>
-                            <ul>
-                                <li><i class="fas fa-chart-line"></i> 215% increase in checkout completion</li>
-                                <li><i class="fas fa-money-bill-wave"></i> 55% higher average order value</li>
-                                <li><i class="fas fa-shopping-cart"></i> 300% ROI on analytics investment</li>
-                            </ul>
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-bar"></i>
                         </div>
+                        <h3>Data Analysis</h3>
+                        <p>Deep dive into your business data</p>
+                    </div>
+                    <div class="service-body">
+                        <p class="service-description">Statistical analysis, trend identification, and predictive modeling for better decision making.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Trend Analysis</li>
+                            <li><i class="fas fa-check"></i> Predictive Modeling</li>
+                            <li><i class="fas fa-check"></i> Statistical Analysis</li>
+                            <li><i class="fas fa-check"></i> Market Research</li>
+                            <li><i class="fas fa-check"></i> Competitive Analysis</li>
+                        </ul>
+                        <button class="enroll-btn" onclick="openContactModal()">Get Started</button>
                     </div>
                 </div>
 
-                <!-- Case Study 3 -->
-                <div class="case-study-card">
-                    <div class="case-study-img" style="background-image: url('https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80');"></div>
-                    <div class="case-study-info">
-                        <h3>Tech Gadgets Marketplace</h3>
-                        <p>Marketing analytics helped reallocate budget to highest-performing channels and campaigns.</p>
-                        <div class="results">
-                            <h4>Results Achieved:</h4>
-                            <ul>
-                                <li><i class="fas fa-chart-line"></i> 47% increase in marketing ROI</li>
-                                <li><i class="fas fa-money-bill-wave"></i> 35% reduction in wasted ad spend</li>
-                                <li><i class="fas fa-users"></i> 89% more qualified leads</li>
-                            </ul>
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-cogs"></i>
                         </div>
+                        <h3>Process Optimization</h3>
+                        <p>Streamline your operations</p>
+                    </div>
+                    <div class="service-body">
+                        <p class="service-description">Identify bottlenecks and optimize business processes using data-driven insights.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Process Mapping</li>
+                            <li><i class="fas fa-check"></i> Efficiency Analysis</li>
+                            <li><i class="fas fa-check"></i> Cost Optimization</li>
+                            <li><i class="fas fa-check"></i> Workflow Automation</li>
+                            <li><i class="fas fa-check"></i> ROI Analysis</li>
+                        </ul>
+                        <button class="enroll-btn" onclick="openContactModal()">Get Started</button>
                     </div>
                 </div>
             </div>
 
             <!-- Metrics Dashboard Preview -->
             <div class="metrics-preview">
-                <h2 style="color: white; font-size: 36px; margin-bottom: 20px;">Typical Results Our Clients Achieve</h2>
-                <p style="max-width: 800px; margin: 0 auto 30px; font-size: 18px; opacity: 0.9;">Our data analytics services deliver measurable improvements across all key business metrics</p>
+                <h2 style="color: white; font-size: 36px; margin-bottom: 20px;">Impact of Data Analytics</h2>
+                <p style="max-width: 800px; margin: 0 auto 30px; font-size: 18px; opacity: 0.9;">Typical improvements my clients achieve through data-driven decisions</p>
                 
                 <div class="metrics-container">
                     <div class="metric">
                         <div class="metric-value">40-300%</div>
-                        <div class="metric-label">Increase in Conversions</div>
+                        <div class="metric-label">Decision Accuracy</div>
                     </div>
                     <div class="metric">
                         <div class="metric-value">25-60%</div>
-                        <div class="metric-label">Reduction in CAC</div>
+                        <div class="metric-label">Cost Reduction</div>
                     </div>
                     <div class="metric">
                         <div class="metric-value">3-5x</div>
-                        <div class="metric-label">Higher Customer LTV</div>
+                        <div class="metric-label">Process Efficiency</div>
                     </div>
                     <div class="metric">
                         <div class="metric-value">30-90 days</div>
-                        <div class="metric-label">Time to Results</div>
+                        <div class="metric-label">Time to Value</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Analytics Solution Form Page -->
-    <section id="form-page" class="form-page">
+    <!-- Projects Page -->
+    <section id="projects-page" class="projects-page">
         <div class="container">
-            <div class="form-container">
-                <h2 class="form-title">Get Your Data Analytics Solution</h2>
-                <p style="text-align: center; margin-bottom: 30px; color: #666;">Fill out this form to get a FREE analytics audit and customized solution for your business</p>
-                <form id="business-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="first-name">First Name *</label>
-                            <input type="text" id="first-name" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="last-name">Last Name *</label>
-                            <input type="text" id="last-name" class="form-control" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone/WhatsApp *</label>
-                            <input type="tel" id="phone" class="form-control" required>
+            <h2 class="section-title">My Data Analytics Projects</h2>
+            <p style="text-align: center; margin-bottom: 40px; color: #666; font-size: 18px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Here are some of my recent data analytics projects showcasing different industries and analytical approaches.
+            </p>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80');"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">E-commerce Sales Dashboard</h3>
+                        <p class="project-description">Developed a comprehensive sales dashboard for an e-commerce company that tracked KPIs, customer behavior, and sales trends in real-time.</p>
+                        <div class="project-tools">
+                            <span class="tool-tag">Tableau</span>
+                            <span class="tool-tag">SQL</span>
+                            <span class="tool-tag">Python</span>
+                            <span class="tool-tag">Google Analytics</span>
                         </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="business-name">Business/Store Name *</label>
-                        <input type="text" id="business-name" class="form-control" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="website">Website/Store URL</label>
-                        <input type="url" id="website" class="form-control" placeholder="https://">
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="monthly-revenue">Current Monthly Revenue (PKR) *</label>
-                            <select id="monthly-revenue" class="form-control" required>
-                                <option value="">Select range</option>
-                                <option value="under-100k">Under 100,000</option>
-                                <option value="100k-500k">100,000 - 500,000</option>
-                                <option value="500k-1m">500,000 - 1 Million</option>
-                                <option value="1m-5m">1 - 5 Million</option>
-                                <option value="5m-plus">5 Million+</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="monthly-visitors">Monthly Website Visitors *</label>
-                            <select id="monthly-visitors" class="form-control" required>
-                                <option value="">Select range</option>
-                                <option value="under-5k">Under 5,000</option>
-                                <option value="5k-20k">5,000 - 20,000</option>
-                                <option value="20k-100k">20,000 - 100,000</option>
-                                <option value="100k-500k">100,000 - 500,000</option>
-                                <option value="500k-plus">500,000+</option>
-                            </select>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80');"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Supply Chain Optimization</h3>
+                        <p class="project-description">Analyzed supply chain data to identify bottlenecks and optimize inventory management, reducing carrying costs by 35%.</p>
+                        <div class="project-tools">
+                            <span class="tool-tag">R</span>
+                            <span class="tool-tag">Excel</span>
+                            <span class="tool-tag">Power BI</span>
+                            <span class="tool-tag">SAP</span>
                         </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="conversion-rate">Current Conversion Rate *</label>
-                        <select id="conversion-rate" class="form-control" required>
-                            <option value="">Select range</option>
-                            <option value="under-1">Under 1%</option>
-                            <option value="1-2">1% - 2%</option>
-                            <option value="2-3">2% - 3%</option>
-                            <option value="3-5">3% - 5%</option>
-                            <option value="5-plus">5%+</option>
-                            <option value="dont-know">Don't know/Not tracking</option>
-                        </select>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80');"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Customer Segmentation Analysis</h3>
+                        <p class="project-description">Created customer segments using clustering algorithms, enabling targeted marketing campaigns that increased conversion by 45%.</p>
+                        <div class="project-tools">
+                            <span class="tool-tag">Python</span>
+                            <span class="tool-tag">Machine Learning</span>
+                            <span class="tool-tag">Tableau</span>
+                            <span class="tool-tag">CRM Analysis</span>
+                        </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="analytics-needs">Primary Analytics Needs *</label>
-                        <select id="analytics-needs" class="form-control" required>
-                            <option value="">Select your priority</option>
-                            <option value="conversion">Increase conversion rate</option>
-                            <option value="traffic">Get more qualified traffic</option>
-                            <option value="retention">Improve customer retention</option>
-                            <option value="average-order">Increase average order value</option>
-                            <option value="roi">Improve marketing ROI</option>
-                            <option value="all">All of the above</option>
-                        </select>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80');"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Financial Performance Dashboard</h3>
+                        <p class="project-description">Built an interactive financial dashboard for a manufacturing company to track revenue, expenses, and profitability metrics.</p>
+                        <div class="project-tools">
+                            <span class="tool-tag">Power BI</span>
+                            <span class="tool-tag">Excel</span>
+                            <span class="tool-tag">SQL Server</span>
+                            <span class="tool-tag">Financial Modeling</span>
+                        </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="current-tools">Current Analytics/Marketing Tools</label>
-                        <input type="text" id="current-tools" class="form-control" placeholder="Google Analytics, Facebook Pixel, etc.">
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80');"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Marketing ROI Analysis</h3>
+                        <p class="project-description">Analyzed marketing campaign data across multiple channels to optimize budget allocation and improve ROI by 60%.</p>
+                        <div class="project-tools">
+                            <span class="tool-tag">Google Analytics</span>
+                            <span class="tool-tag">Facebook Insights</span>
+                            <span class="tool-tag">Excel</span>
+                            <span class="tool-tag">ROI Modeling</span>
+                        </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="goals">What are your primary business goals? *</label>
-                        <textarea id="goals" class="form-control" rows="4" placeholder="Describe what you want to achieve with data analytics in the next 3-6 months..." required></textarea>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80');"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Healthcare Data Analysis</h3>
+                        <p class="project-description">Analyzed patient data to identify patterns and improve healthcare service delivery efficiency by 40%.</p>
+                        <div class="project-tools">
+                            <span class="tool-tag">Python</span>
+                            <span class="tool-tag">Pandas</span>
+                            <span class="tool-tag">Statistical Analysis</span>
+                            <span class="tool-tag">Data Visualization</span>
+                        </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="challenges">Biggest Challenges You're Facing</label>
-                        <textarea id="challenges" class="form-control" rows="3" placeholder="What are your biggest challenges with data, analytics, or conversions?"></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">Get FREE Analytics Audit</button>
-                    <p style="text-align: center; margin-top: 15px; color: #666; font-size: 14px;">We'll analyze your data and provide specific recommendations within 48 hours</p>
-                </form>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <button class="submit-btn" onclick="openContactModal()" style="padding: 15px 50px; font-size: 18px;">
+                    <i class="fas fa-paper-plane"></i> Start Your Project
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- Contact Details Page -->
-    <section id="contact-page" class="contact-page">
-        <div class="container">
-            <h2 class="section-title">Contact Our Analytics Team</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3 style="color: white; margin-bottom: 30px; font-size: 28px;">Get In Touch</h3>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <h4>Address</h4>
-                            <p>DataPro Analytics Center, Karachi, Pakistan</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div>
-                            <h4>Phone/WhatsApp</h4>
-                            <p>+92 300 1234567</p>
-                            <p>+92 21 1234567</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h4>Email</h4>
-                            <p>analytics@datapro.com.pk</p>
-                            <p>support@datapro.com.pk</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div>
-                            <h4>Business Hours</h4>
-                            <p>Monday - Friday: 9:00 AM - 7:00 PM</p>
-                            <p>Saturday: 10:00 AM - 4:00 PM</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-calendar-check"></i>
-                        </div>
-                        <div>
-                            <h4>Free Consultation</h4>
-                            <p>30-minute free analytics consultation available</p>
-                            <p>Book via WhatsApp or email</p>
-                        </div>
-                    </div>
+    <!-- Quick Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeContactModal()">&times;</button>
+            <h2 style="color: #1a2980; margin-bottom: 25px; text-align: center;">Contact Me</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 30px;">Let's discuss how I can help with your data analytics needs</p>
+            
+            <form id="quick-contact-form">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Your Name *" required>
                 </div>
                 
-                <div class="contact-form">
-                    <h3 style="color: #1a2980; margin-bottom: 30px;">Send Us a Message</h3>
-                    <form id="contact-form">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Business Name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Subject" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <textarea class="form-control" rows="5" placeholder="How can our analytics team help your business?" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Page -->
-    <section id="faq-page" class="faq-page">
-        <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <div class="faq-container">
-                <div class="faq-item active">
-                    <div class="faq-question">
-                        <span>How quickly will I see results from your analytics services?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Most clients see initial insights within 1-2 weeks. Measurable improvements in conversions typically appear within 30-60 days as we implement data-driven optimizations. The free analytics audit we provide will give you immediate actionable insights.</p>
-                    </div>
+                <div class="form-group">
+                    <input type="tel" class="form-control" placeholder="Phone/WhatsApp Number *" required>
                 </div>
                 
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>What data do you need from my business?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email Address *" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Company/Business Name">
+                </div>
+                
+                <div class="form-group">
+                    <select class="form-control" required>
+                        <option value="">What is your main challenge? *</option>
+                        <option value="data-analysis">Need data analysis for decision making</option>
+                        <option value="dashboard">Want to create business dashboards</option>
+                        <option value="optimization">Process optimization using data</option>
+                        <option value="reporting">Automated reporting solutions</option>
+                        <option value="other">Other data-related challenge</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <textarea class="form-control" rows="4" placeholder="Describe your specific requirements or challenges... *" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn" style="width: 100%;">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>Syed Furqan</h3>
+            <p>Data Business Analyst | Transforming Data into Business Value</p>
+            
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            
+            <div class="copyright">
+                <p>Email: furqan@databusinessanalyst.com | Phone: +92 300 123 4567</p>
+                <p>© 2023 Syed Furqan | Data Business Analyst. All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Page navigation functions
+        function showHomePage() {
+            document.getElementById('home-page').style.display = 'block';
+            document.getElementById('projects-page').style.display = 'none';
+            closeContactModal();
+        }
+        
+        function showProjectsPage() {
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('projects-page').style.display = 'block';
+            closeContactModal();
+            // Scroll to top of projects page
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+        
+        function showServicesPage() {
+            showHomePage();
+            // Scroll to services section
+            document.querySelector('.section-title').scrollIntoView({behavior: 'smooth'});
+        }
+        
+        // Modal functions
+        function openContactModal() {
+            document.getElementById('contactModal').style.display = 'flex';
+        }
+        
+        function closeContactModal() {
+            document.getElementById('contactModal').style.display = 'none';
+        }
+        
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const nav = document.getElementById('main-nav');
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            showHomePage();
+            
+            // Form submission handling
+            document.getElementById('quick-contact-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! I will contact you within 24 hours.');
+                this.reset();
+                closeContactModal();
+            });
+            
+            // Close modal when clicking outside
+            document.getElementById('contactModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeContactModal();
+                }
+            });
+            
+            // Mobile menu adjustment
+            function adjustMobileMenu() {
+                const nav = document.getElementById('main-nav');
+                if (window.innerWidth <= 768) {
+                    nav.style.display = 'none';
+                    document.querySelector('.mobile-menu-btn').style.display = 'block';
+                } else {
+                    nav.style.display = 'flex';
+                    document.querySelector('.mobile-menu-btn').style.display = 'none';
+                }
+            }
+            
+            // Initial adjustment
+            adjustMobileMenu();
+            
+            // Adjust on window resize
+            window.addEventListener('resize', adjustMobileMenu);
+        });
+    </script>
+</body>
+</html>
