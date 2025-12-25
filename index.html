@@ -100,10 +100,12 @@
             text-align: center;
             color: white;
             padding: 20px;
+            position: relative;
         }
         
         .hero-content {
-            max-width: 800px;
+            max-width: 900px;
+            z-index: 2;
         }
         
         .hero-title {
@@ -119,11 +121,59 @@
             opacity: 0.9;
         }
         
+        .hero-copy {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            border-left: 5px solid #ff8a00;
+        }
+        
+        .hero-copy h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #ffde59;
+        }
+        
+        .hero-copy p {
+            font-size: 18px;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .hero-copy ul {
+            text-align: left;
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        
+        .hero-copy li {
+            margin-bottom: 10px;
+            font-size: 17px;
+        }
+        
+        .hero-copy li i {
+            color: #26d0ce;
+            margin-right: 10px;
+        }
+        
+        .cta-highlight {
+            background: linear-gradient(to right, #ff8a00, #da1b60);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 25px;
+            font-weight: 700;
+            font-size: 20px;
+            box-shadow: 0 4px 15px rgba(255, 138, 0, 0.4);
+        }
+        
         .hero-buttons {
             display: flex;
             justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
+            margin-top: 30px;
         }
         
         .hero-btn {
@@ -198,93 +248,92 @@
             border: none;
         }
         
-        /* Services Section */
-        .section-title {
+        /* FAQ Section */
+        .faq-page {
+            display: none;
+            padding: 50px 20px;
+            background-color: #f8f9fa;
+        }
+        
+        .faq-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .faq-intro {
             text-align: center;
             margin-bottom: 50px;
-            font-size: 36px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .faq-intro h2 {
             color: #1a2980;
-            position: relative;
-            padding-top: 80px;
+            font-size: 36px;
+            margin-bottom: 20px;
         }
         
-        .section-title:after {
-            content: '';
-            display: block;
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(to right, #1a2980, #26d0ce);
-            margin: 10px auto;
-            border-radius: 2px;
+        .faq-intro p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.8;
         }
         
-        .services-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 80px;
-        }
-        
-        .service-card {
+        .faq-item {
             background: white;
             border-radius: 12px;
-            overflow: hidden;
-            width: 350px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-        }
-        
-        .service-header {
-            padding: 25px;
-            background: linear-gradient(135deg, #1a2980, #26d0ce);
-            color: white;
-            text-align: center;
-            position: relative;
-        }
-        
-        .service-icon {
-            font-size: 40px;
-            margin-bottom: 15px;
-        }
-        
-        .service-header h3 {
-            font-size: 24px;
-            margin-bottom: 5px;
-        }
-        
-        .service-body {
-            padding: 25px;
-        }
-        
-        .service-description {
-            color: #666;
             margin-bottom: 20px;
-            min-height: 100px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
         }
         
-        .service-features {
-            list-style: none;
-            margin-bottom: 25px;
+        .faq-item:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
         }
         
-        .service-features li {
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
+        .faq-question {
+            padding: 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            font-size: 20px;
+            color: #1a2980;
+            background: #f8f9fa;
+        }
+        
+        .faq-question:hover {
+            background: #e9f7fe;
+        }
+        
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.3s ease;
             color: #555;
+            line-height: 1.8;
         }
         
-        .service-features li:last-child {
-            border-bottom: none;
+        .faq-item.active .faq-answer {
+            padding: 25px;
+            max-height: 1000px;
         }
         
-        .service-features li i {
+        .faq-answer ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        
+        .faq-answer li {
+            margin-bottom: 10px;
+            color: #666;
+        }
+        
+        .faq-answer li i {
             color: #26d0ce;
             margin-right: 10px;
         }
@@ -352,44 +401,6 @@
             border-radius: 20px;
             font-size: 14px;
             font-weight: 600;
-        }
-        
-        /* Metrics Dashboard Preview */
-        .metrics-preview {
-            background: linear-gradient(135deg, #1a2980, #26d0ce);
-            color: white;
-            padding: 60px 20px;
-            margin: 80px 0;
-            text-align: center;
-            border-radius: 15px;
-        }
-        
-        .metrics-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .metric {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 25px;
-            border-radius: 10px;
-            min-width: 200px;
-            backdrop-filter: blur(10px);
-        }
-        
-        .metric-value {
-            font-size: 42px;
-            font-weight: 800;
-            margin-bottom: 10px;
-            color: #ffde59;
-        }
-        
-        .metric-label {
-            font-size: 18px;
-            opacity: 0.9;
         }
         
         /* About Section */
@@ -528,6 +539,23 @@
                 font-size: 20px;
             }
             
+            .hero-copy {
+                padding: 20px;
+            }
+            
+            .hero-copy h3 {
+                font-size: 24px;
+            }
+            
+            .hero-copy p {
+                font-size: 16px;
+            }
+            
+            .cta-highlight {
+                font-size: 18px;
+                padding: 12px;
+            }
+            
             .hero-btn {
                 padding: 15px 30px;
                 min-width: 100%;
@@ -543,13 +571,9 @@
                 padding: 30px 20px;
             }
             
-            .section-title {
-                font-size: 30px;
-                padding-top: 40px;
-            }
-            
-            .service-card {
-                width: 100%;
+            .faq-question {
+                padding: 20px;
+                font-size: 18px;
             }
             
             .projects-grid {
@@ -561,17 +585,12 @@
                 text-align: center;
             }
             
-            .metric {
-                min-width: 150px;
-                padding: 20px;
-            }
-            
-            .metric-value {
-                font-size: 32px;
-            }
-            
             .project-image {
                 height: 180px;
+            }
+            
+            .faq-intro h2 {
+                font-size: 30px;
             }
         }
         
@@ -584,8 +603,8 @@
                 font-size: 18px;
             }
             
-            .section-title {
-                font-size: 26px;
+            .hero-copy h3 {
+                font-size: 22px;
             }
             
             .modal-content {
@@ -595,6 +614,11 @@
             .profile-img {
                 width: 250px;
                 height: 250px;
+            }
+            
+            .faq-question {
+                font-size: 16px;
+                padding: 18px;
             }
         }
     </style>
@@ -611,7 +635,7 @@
                 <ul>
                     <li><a href="#" onclick="showHomePage()">Home</a></li>
                     <li><a href="#" onclick="showProjectsPage()">Projects</a></li>
-                    <li><a href="#" onclick="showServicesPage()">Services</a></li>
+                    <li><a href="#" onclick="showFaqPage()">FAQ</a></li>
                     <li><a href="#" onclick="openContactModal()">Contact</a></li>
                 </ul>
             </nav>
@@ -628,12 +652,32 @@
             <div class="hero-content">
                 <h1 class="hero-title">Syed Furqan</h1>
                 <h2 class="hero-subtitle">Data Business Analyst</h2>
+                
+                <!-- Ad Copy Text -->
+                <div class="hero-copy">
+                    <h3>🚀 Stop Guessing, Start Growing with Data!</h3>
+                    <p>Is your business making decisions based on gut feelings instead of data? You're leaving money on the table!</p>
+                    
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> <strong>40% of businesses fail</strong> because they don't understand their data</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>3 out of 5 companies</strong> don't track their most important metrics</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Data-driven companies</strong> are 23x more likely to acquire customers</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Businesses using analytics</strong> see 8% higher profitability</li>
+                    </ul>
+                    
+                    <p>I've helped 50+ businesses increase their revenue by 30-300% using simple data analytics strategies.</p>
+                    
+                    <div class="cta-highlight">
+                        📞 Book a FREE 30-minute Data Strategy Session Today!
+                    </div>
+                </div>
+                
                 <div class="hero-buttons">
                     <a href="#" class="hero-btn contact-btn" onclick="openContactModal()">
-                        <i class="fas fa-envelope"></i> Contact Me
+                        <i class="fas fa-calendar-check"></i> Book FREE Consultation
                     </a>
                     <a href="#" class="hero-btn projects-btn" onclick="showProjectsPage()">
-                        <i class="fas fa-chart-bar"></i> See Projects
+                        <i class="fas fa-chart-bar"></i> See My Projects
                     </a>
                 </div>
             </div>
@@ -664,101 +708,167 @@
                 </div>
             </div>
         </section>
+    </section>
 
-        <!-- Services Section -->
+    <!-- FAQ Page -->
+    <section id="faq-page" class="faq-page">
         <div class="container">
-            <h2 class="section-title">My Data Analytics Services</h2>
-            <div class="services-container">
-                <!-- Service 1 -->
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <h3>Business Intelligence</h3>
-                        <p>Transform data into insights</p>
+            <div class="faq-intro">
+                <h2>Frequently Asked Questions</h2>
+                <p>Here are the most common questions clients ask before hiring a data business analyst. Get all your doubts cleared before you make a decision.</p>
+            </div>
+            
+            <div class="faq-container">
+                <!-- FAQ 1 -->
+                <div class="faq-item active">
+                    <div class="faq-question">
+                        <span>What exactly does a Data Business Analyst do?</span>
+                        <i class="fas fa-chevron-down"></i>
                     </div>
-                    <div class="service-body">
-                        <p class="service-description">Comprehensive BI solutions including dashboard creation, KPI tracking, and performance monitoring.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Interactive Dashboards</li>
-                            <li><i class="fas fa-check"></i> Real-time Reporting</li>
-                            <li><i class="fas fa-check"></i> KPI Development</li>
-                            <li><i class="fas fa-check"></i> Performance Analytics</li>
-                            <li><i class="fas fa-check"></i> Automated Reports</li>
+                    <div class="faq-answer">
+                        <p>A Data Business Analyst bridges the gap between raw data and business decisions. I help you:</p>
+                        <ul>
+                            <li><i class="fas fa-chart-line"></i> Analyze your business data to identify trends and patterns</li>
+                            <li><i class="fas fa-search"></i> Find hidden opportunities for growth and cost-saving</li>
+                            <li><i class="fas fa-bullseye"></i> Set up key performance indicators (KPIs) to track progress</li>
+                            <li><i class="fas fa-lightbulb"></i> Provide actionable insights for better decision-making</li>
+                            <li><i class="fas fa-tachometer-alt"></i> Create dashboards to monitor business health in real-time</li>
                         </ul>
-                        <button class="enroll-btn" onclick="openContactModal()">Get Started</button>
                     </div>
                 </div>
-
-                <!-- Service 2 -->
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <i class="fas fa-chart-bar"></i>
-                        </div>
-                        <h3>Data Analysis</h3>
-                        <p>Deep dive into your business data</p>
+                
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How much does data analytics services cost?</span>
+                        <i class="fas fa-chevron-down"></i>
                     </div>
-                    <div class="service-body">
-                        <p class="service-description">Statistical analysis, trend identification, and predictive modeling for better decision making.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Trend Analysis</li>
-                            <li><i class="fas fa-check"></i> Predictive Modeling</li>
-                            <li><i class="fas fa-check"></i> Statistical Analysis</li>
-                            <li><i class="fas fa-check"></i> Market Research</li>
-                            <li><i class="fas fa-check"></i> Competitive Analysis</li>
+                    <div class="faq-answer">
+                        <p>My services start from PKR 25,000/month, but the exact cost depends on:</p>
+                        <ul>
+                            <li><i class="fas fa-database"></i> <strong>Size of your business</strong> - Small businesses vs enterprises</li>
+                            <li><i class="fas fa-project-diagram"></i> <strong>Complexity of your data</strong> - Simple sales data vs multi-source data</li>
+                            <li><i class="fas fa-tasks"></i> <strong>Scope of work</strong> - Basic reporting vs advanced analytics</li>
+                            <li><i class="fas fa-clock"></i> <strong>Time commitment</strong> - Monthly vs project-based</li>
                         </ul>
-                        <button class="enroll-btn" onclick="openContactModal()">Get Started</button>
+                        <p><strong>Most clients see 3-5x ROI</strong> on their investment within the first 3 months.</p>
                     </div>
                 </div>
-
-                <!-- Service 3 -->
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <h3>Process Optimization</h3>
-                        <p>Streamline your operations</p>
+                
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long does it take to see results?</span>
+                        <i class="fas fa-chevron-down"></i>
                     </div>
-                    <div class="service-body">
-                        <p class="service-description">Identify bottlenecks and optimize business processes using data-driven insights.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Process Mapping</li>
-                            <li><i class="fas fa-check"></i> Efficiency Analysis</li>
-                            <li><i class="fas fa-check"></i> Cost Optimization</li>
-                            <li><i class="fas fa-check"></i> Workflow Automation</li>
-                            <li><i class="fas fa-check"></i> ROI Analysis</li>
+                    <div class="faq-answer">
+                        <p>Here's a typical timeline:</p>
+                        <ul>
+                            <li><i class="fas fa-calendar-week"></i> <strong>Week 1-2:</strong> Initial setup, data collection, and analysis</li>
+                            <li><i class="fas fa-chart-bar"></i> <strong>Week 3-4:</strong> First insights and quick-win recommendations</li>
+                            <li><i class="fas fa-rocket"></i> <strong>Month 2:</strong> Implementation and measurable improvements</li>
+                            <li><i class="fas fa-trophy"></i> <strong>Month 3:</strong> Significant ROI and optimized processes</li>
                         </ul>
-                        <button class="enroll-btn" onclick="openContactModal()">Get Started</button>
+                        <p>Most clients see initial improvements within 30 days and full results within 90 days.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What if I don't have any data tracking setup?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No problem at all! I help businesses at every stage:</p>
+                        <ul>
+                            <li><i class="fas fa-cogs"></i> <strong>Starting from zero:</strong> I'll help set up basic tracking systems</li>
+                            <li><i class="fas fa-download"></i> <strong>Existing data:</strong> I'll organize and analyze what you have</li>
+                            <li><i class="fas fa-tools"></i> <strong>Manual records:</strong> Even Excel sheets can be turned into insights</li>
+                            <li><i class="fas fa-sync-alt"></i> <strong>Automated systems:</strong> Set up ongoing tracking and reporting</li>
+                        </ul>
+                        <p>Many of my most successful projects started with clients who had no data tracking at all!</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What makes you different from other analysts?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Three key differentiators:</p>
+                        <ul>
+                            <li><i class="fas fa-business-time"></i> <strong>Business-first approach:</strong> I focus on actionable insights that drive revenue, not just pretty charts</li>
+                            <li><i class="fas fa-hands-helping"></i> <strong>Hands-on implementation:</strong> I don't just give reports - I help implement changes</li>
+                            <li><i class="fas fa-language"></i> <strong>Plain English explanations:</strong> No technical jargon - I explain everything in simple business terms</li>
+                            <li><i class="fas fa-money-bill-wave"></i> <strong>ROI guarantee:</strong> My services pay for themselves through identified opportunities</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- FAQ 6 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What information do you need from me to start?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To get started, I need:</p>
+                        <ul>
+                            <li><i class="fas fa-file-invoice-dollar"></i> <strong>Sales data</strong> (if available)</li>
+                            <li><i class="fas fa-users"></i> <strong>Customer information</strong></li>
+                            <li><i class="fas fa-shopping-cart"></i> <strong>Product/service details</strong></li>
+                            <li><i class="fas fa-bullhorn"></i> <strong>Marketing efforts</strong> and results</li>
+                            <li><i class="fas fa-bullseye"></i> <strong>Your business goals</strong> and challenges</li>
+                        </ul>
+                        <p>Don't worry if you don't have all of these - we can start with whatever you have and build from there.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 7 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can you help with specific business problems?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! Common problems I solve include:</p>
+                        <ul>
+                            <li><i class="fas fa-chart-line"></i> <strong>Low conversion rates:</strong> Identify why visitors don't become customers</li>
+                            <li><i class="fas fa-user-slash"></i> <strong>High customer churn:</strong> Understand why customers leave</li>
+                            <li><i class="fas fa-money-bill-wave"></i> <strong>Poor marketing ROI:</strong> Find which channels work and which don't</li>
+                            <li><i class="fas fa-tachometer-alt"></i> <strong>Inefficient operations:</strong> Streamline processes to save time/money</li>
+                            <li><i class="fas fa-search-dollar"></i> <strong>Unclear growth opportunities:</strong> Find untapped markets/products</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- FAQ 8 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What's included in your free consultation?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>During our FREE 30-minute consultation, you'll get:</p>
+                        <ul>
+                            <li><i class="fas fa-search"></i> <strong>Quick data health check</strong> of your current setup</li>
+                            <li><i class="fas fa-lightbulb"></i> <strong>2-3 immediate opportunities</strong> I can identify</li>
+                            <li><i class="fas fa-map"></i> <strong>Customized roadmap</strong> for your data journey</li>
+                            <li><i class="fas fa-calculator"></i> <strong>ROD estimation</strong> (Return on Data investment)</li>
+                            <li><i class="fas fa-question-circle"></i> <strong>Answers to all your questions</strong> with no obligation</li>
+                        </ul>
+                        <p>This consultation alone has helped businesses identify 5-6 figure opportunities.</p>
                     </div>
                 </div>
             </div>
-
-            <!-- Metrics Dashboard Preview -->
-            <div class="metrics-preview">
-                <h2 style="color: white; font-size: 36px; margin-bottom: 20px;">Impact of Data Analytics</h2>
-                <p style="max-width: 800px; margin: 0 auto 30px; font-size: 18px; opacity: 0.9;">Typical improvements my clients achieve through data-driven decisions</p>
-                
-                <div class="metrics-container">
-                    <div class="metric">
-                        <div class="metric-value">40-300%</div>
-                        <div class="metric-label">Decision Accuracy</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-value">25-60%</div>
-                        <div class="metric-label">Cost Reduction</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-value">3-5x</div>
-                        <div class="metric-label">Process Efficiency</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-value">30-90 days</div>
-                        <div class="metric-label">Time to Value</div>
-                    </div>
-                </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <button class="hero-btn contact-btn" onclick="openContactModal()" style="padding: 18px 50px; font-size: 18px;">
+                    <i class="fas fa-calendar-check"></i> Book Your FREE Consultation Now
+                </button>
             </div>
         </div>
     </section>
@@ -864,7 +974,7 @@
             </div>
             
             <div style="text-align: center; margin-top: 50px;">
-                <button class="submit-btn" onclick="openContactModal()" style="padding: 15px 50px; font-size: 18px;">
+                <button class="hero-btn contact-btn" onclick="openContactModal()" style="padding: 18px 50px; font-size: 18px;">
                     <i class="fas fa-paper-plane"></i> Start Your Project
                 </button>
             </div>
@@ -875,8 +985,8 @@
     <div id="contactModal" class="modal">
         <div class="modal-content">
             <button class="close-modal" onclick="closeContactModal()">&times;</button>
-            <h2 style="color: #1a2980; margin-bottom: 25px; text-align: center;">Contact Me</h2>
-            <p style="text-align: center; color: #666; margin-bottom: 30px;">Let's discuss how I can help with your data analytics needs</p>
+            <h2 style="color: #1a2980; margin-bottom: 25px; text-align: center;">Book Your FREE Consultation</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 30px;">Fill this form to schedule your 30-minute FREE data strategy session</p>
             
             <form id="quick-contact-form">
                 <div class="form-group">
@@ -892,26 +1002,34 @@
                 </div>
                 
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Company/Business Name">
+                    <input type="text" class="form-control" placeholder="Company/Business Name *" required>
                 </div>
                 
                 <div class="form-group">
                     <select class="form-control" required>
-                        <option value="">What is your main challenge? *</option>
-                        <option value="data-analysis">Need data analysis for decision making</option>
-                        <option value="dashboard">Want to create business dashboards</option>
-                        <option value="optimization">Process optimization using data</option>
-                        <option value="reporting">Automated reporting solutions</option>
-                        <option value="other">Other data-related challenge</option>
+                        <option value="">What is your biggest business challenge? *</option>
+                        <option value="low-sales">Low sales/conversions</option>
+                        <option value="high-costs">High operational costs</option>
+                        <option value="customer-retention">Poor customer retention</option>
+                        <option value="marketing-roi">Low marketing ROI</option>
+                        <option value="data-tracking">No data tracking system</option>
+                        <option value="decision-making">Gut-based decision making</option>
                     </select>
                 </div>
                 
                 <div class="form-group">
-                    <textarea class="form-control" rows="4" placeholder="Describe your specific requirements or challenges... *" required></textarea>
+                    <textarea class="form-control" rows="4" placeholder="Briefly describe your business and what you hope to achieve with data analytics... *" required></textarea>
                 </div>
                 
-                <button type="submit" class="submit-btn" style="width: 100%;">
-                    <i class="fas fa-paper-plane"></i> Send Message
+                <div class="form-group">
+                    <label style="display: flex; align-items: center; font-size: 14px; color: #666;">
+                        <input type="checkbox" required style="margin-right: 10px;">
+                        I agree to receive a FREE 30-minute data strategy consultation
+                    </label>
+                </div>
+                
+                <button type="submit" class="hero-btn contact-btn" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-calendar-check"></i> Book FREE Session Now
                 </button>
             </form>
         </div>
@@ -932,8 +1050,9 @@
             </div>
             
             <div class="copyright">
-                <p>Email: furqan@databusinessanalyst.com | Phone: +92 300 123 4567</p>
+                <p>📧 Email: furqan@databusinessanalyst.com | 📱 Phone: +92 300 123 4567</p>
                 <p>© 2023 Syed Furqan | Data Business Analyst. All Rights Reserved</p>
+                <p style="margin-top: 10px; font-size: 13px;">Book your FREE data strategy session today and discover hidden opportunities in your business!</p>
             </div>
         </div>
     </footer>
@@ -943,21 +1062,26 @@
         function showHomePage() {
             document.getElementById('home-page').style.display = 'block';
             document.getElementById('projects-page').style.display = 'none';
+            document.getElementById('faq-page').style.display = 'none';
             closeContactModal();
         }
         
         function showProjectsPage() {
             document.getElementById('home-page').style.display = 'none';
             document.getElementById('projects-page').style.display = 'block';
+            document.getElementById('faq-page').style.display = 'none';
             closeContactModal();
             // Scroll to top of projects page
             window.scrollTo({top: 0, behavior: 'smooth'});
         }
         
-        function showServicesPage() {
-            showHomePage();
-            // Scroll to services section
-            document.querySelector('.section-title').scrollIntoView({behavior: 'smooth'});
+        function showFaqPage() {
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('projects-page').style.display = 'none';
+            document.getElementById('faq-page').style.display = 'block';
+            closeContactModal();
+            // Scroll to top of FAQ page
+            window.scrollTo({top: 0, behavior: 'smooth'});
         }
         
         // Modal functions
@@ -975,16 +1099,37 @@
             nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
         }
         
+        // FAQ toggle functionality
+        function setupFaqToggles() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const item = question.parentElement;
+                    item.classList.toggle('active');
+                    
+                    // Close other FAQs if needed
+                    const allItems = document.querySelectorAll('.faq-item');
+                    allItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        }
+        
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
             showHomePage();
+            setupFaqToggles();
             
             // Form submission handling
             document.getElementById('quick-contact-form').addEventListener('submit', function(e) {
                 e.preventDefault();
-                alert('Thank you for your message! I will contact you within 24 hours.');
+                alert('🎉 Thank you for booking your FREE consultation! I will contact you within 24 hours to schedule our 30-minute data strategy session.');
                 this.reset();
                 closeContactModal();
+                showHomePage();
             });
             
             // Close modal when clicking outside
@@ -1011,6 +1156,17 @@
             
             // Adjust on window resize
             window.addEventListener('resize', adjustMobileMenu);
+            
+            // Auto-scroll to top when changing pages
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (this.getAttribute('href') === '#') {
+                        e.preventDefault();
+                        window.scrollTo({top: 0, behavior: 'smooth'});
+                    }
+                });
+            });
         });
     </script>
 </body>
